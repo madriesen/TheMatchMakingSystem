@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "thematchmakingsystem"
+  "defaultProject": "thematchmakingsystem",
+  "cli": {
+    "analytics": false
+  }
 }
