@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ab0c816d-1945-4048-99bf-2a02f2b1be75/deploy-status)](https://app.netlify.com/sites/thematchmakingsystem/deploys)
 # Thematchmakingsystem
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
