@@ -11,6 +11,20 @@
     /* margin-left: -16px; */
 }
 
+.register::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 34px 5px;
+    border-color: white;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: 26px;
+    /* margin-left: -16px; */
+}
+
+
 .background-image {
     position: fixed;
     width: 100%;
