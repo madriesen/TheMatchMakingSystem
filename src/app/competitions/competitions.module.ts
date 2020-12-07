@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { AddCompetitionComponent } from './add-competition/add-competition.component';
 import { CompetitionsComponent } from './competitions/competitions.component';
 import { CompetitionComponent } from './competition/competition.component';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 
 @NgModule({
-  declarations: [AddCompetitionComponent, CompetitionsComponent, CompetitionComponent],
+  
   imports: [
-    CommonModule
+    SharedModule
+  ],
+  declarations: [AddCompetitionComponent, CompetitionsComponent, CompetitionComponent],
+  exports:[
+    CompetitionsComponent
   ]
 })
 export class CompetitionsModule { }

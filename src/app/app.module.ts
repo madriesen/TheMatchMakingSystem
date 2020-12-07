@@ -7,6 +7,7 @@ import { SharedModule } from '../app/shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CompetitionsModule } from './competitions/competitions.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    CompetitionsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,

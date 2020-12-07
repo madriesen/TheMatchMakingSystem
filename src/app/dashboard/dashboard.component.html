@@ -4,7 +4,8 @@
             <div class="rounded-full w-44 h-44 bg-gray-300 mb-5"></div>
             <div class="text-xl">Firstname Lastname</div>
         </div>
-        <div class="lowercase py-8 pl-8 w-full hover:bg-white hover:text-black flex"><span class="mr-4">
+        <div class="lowercase py-8 pl-8 w-full hover:bg-white hover:text-black flex" routerLink="/competitions" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"><span class="mr-4">
                 <fa-icon [icon]="faFutbol"></fa-icon>
             </span>
             matches

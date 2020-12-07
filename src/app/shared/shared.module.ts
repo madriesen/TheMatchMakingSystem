@@ -20,6 +20,7 @@ import {MatDividerModule} from '@angular/material/divider';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -44,6 +45,7 @@ import {MatDividerModule} from '@angular/material/divider';
   
   ],
   exports: [
+    CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
