@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "src/tailwind.css"
             ],
             "scripts": []
           },
@@ -91,7 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "src/tailwind.css"
             ],
             "scripts": []
           }
