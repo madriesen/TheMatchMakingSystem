@@ -6,8 +6,10 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
-  { path: 'dashboard', component: DashboardComponent },
-
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
 ];
 
 @NgModule({
