@@ -28,8 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+
+              "src/styles.sass",
+              "src/tailwind.css"
+
             ],
             "scripts": []
           },
@@ -92,8 +94,10 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+
+              "src/styles.sass",
+              "src/tailwind.css"
+
             ],
             "scripts": []
           }
