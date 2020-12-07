@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "root": "",
@@ -28,7 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+
+              "src/styles.sass",
+              "src/tailwind.css"
+
             ],
             "scripts": []
           },
@@ -91,7 +94,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+
+              "src/styles.sass",
+              "src/tailwind.css"
+
             ],
             "scripts": []
           }
@@ -127,5 +133,10 @@
   "defaultProject": "thematchmakingsystem",
   "cli": {
     "analytics": false
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }
