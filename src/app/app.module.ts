@@ -3,21 +3,24 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {SharedModule} from '../app/shared/shared.module'
+import { SharedModule } from '../app/shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
-
+    SharedModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
