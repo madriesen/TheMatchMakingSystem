@@ -1,0 +1,18 @@
+<app-card title="upcoming matches">
+    <div id="matches" class="m-5 text-sm md:text-xl uppercase">
+        <div class="grid grid-cols-3 font-sans p-3 pb-2 bg-white font-bold border-black border-b">
+            <div class="">home</div>
+            <div class="text-center">time</div>
+            <div class="text-right">away</div>
+        </div>
+        <app-short-match home="fc de kampioenen" time="21/12 13:30" away="de schellekens" myTeam="home">
+        </app-short-match>
+        <app-short-match home="de spuiters" time="23/12 09:25" away="FC de kampioenen" myTeam="away">
+        </app-short-match>
+        <app-short-match home="de schellekens" time="28/12 10:00" away="FC de kampioenen" myTeam="away">
+        </app-short-match>
+
+        <div class="text-center my-8"><a routerLink="/dashboard/matches" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Click here to see all matches</a></div>
+    </div>
+</app-card>

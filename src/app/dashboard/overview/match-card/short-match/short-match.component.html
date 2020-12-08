@@ -1,0 +1,5 @@
+<div class="grid grid-cols-3 font-sans p-3 bg-white">
+    <div [ngClass]="{'font-bold': myTeam === 'home'}" class="overflow-hidden truncate">{{home}}</div>
+    <div class="text-center">{{time}}</div>
+    <div [ngClass]="{'font-bold': myTeam === 'away'}" class="text-right overflow-hidden truncate">{{away}}</div>
+</div>
