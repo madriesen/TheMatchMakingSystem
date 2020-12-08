@@ -9,6 +9,8 @@ import { DashboardComponent } from './dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavitemComponent } from './navigation/navitem/navitem.component';
+import { CardComponent } from './overview/card/card.component';
+import { ShortMatchComponent } from './overview/card/short-match/short-match.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { NavitemComponent } from './navigation/navitem/navitem.component';
     DashboardComponent,
     OverviewComponent,
     NavigationComponent,
-    NavitemComponent
+    NavitemComponent,
+    CardComponent,
+    ShortMatchComponent
   ],
   bootstrap: [DashboardComponent]
 })
