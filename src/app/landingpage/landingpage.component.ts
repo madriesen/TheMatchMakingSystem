@@ -31,7 +31,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class LandingpageComponent implements OnInit {
 
-  private location: string;
+   location: string;
 
   constructor() {
     this.location = 'welcome';

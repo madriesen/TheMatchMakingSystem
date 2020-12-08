@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import {Router} from "@angular/router";
 import { User } from 'src/app/models/user.model';
+import { RegisterService } from 'src/app/services/register.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
+  providers: [DatePipe],
   animations: [
     trigger(
       'inOutAnimation',
@@ -33,7 +36,7 @@ import { User } from 'src/app/models/user.model';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _registerService: RegisterService, private datePipe: DatePipe) { }
 
   ngOnInit(): void {
   }
@@ -50,10 +53,18 @@ export class RegisterComponent implements OnInit {
 
 
 submitted: boolean= false
-userModel: User;
-  addUser()
+userModel: User =  new User();
+
+register()
   {
+    this.submitted = true;
+    this.userModel.roleId = 1;
+    //this.userModel.dob = this.datePipe.transform('')
+    this._registerService.register(this.userModel)
+    
+    console.log(this.userModel.dob)
 
   }
+
 
 }
