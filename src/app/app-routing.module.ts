@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: '', component: LandingpageComponent },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    redirectTo: '/dashboard/overview',
+    pathMatch: 'full',
   },
 ];
 

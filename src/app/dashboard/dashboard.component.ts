@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { faFutbol } from '@fortawesome/free-solid-svg-icons';
 import { faChess } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -12,10 +13,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  faFutbol = faFutbol;
-  faChess = faChess;
-  faMapMarkerAlt = faMapMarkerAlt;
-  faPowerOff = faPowerOff;
+
 
   constructor() { }
  
