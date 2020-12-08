@@ -13,6 +13,7 @@ export class AdminService {
 
   //USERS
   getUsers(): Observable<User[]> {
+
     return this.http.get<User[]>("https://localhost:5001/api/user", {
         headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem("token"))
       });
@@ -22,6 +23,7 @@ export class AdminService {
     return this.http.post<User>("https://localhost:5001/api/user/", newUser, {
       headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem("token"))
     });
+
   }
 
   deleteUser(userID: number): Observable<User> {

@@ -21,6 +21,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -42,7 +43,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatMenuModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatPaginatorModule
   
   ],
   exports: [
@@ -63,7 +65,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatMenuModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatPaginatorModule
     
     
 
