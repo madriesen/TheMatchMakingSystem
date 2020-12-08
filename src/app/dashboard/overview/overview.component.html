@@ -1,32 +1,4 @@
-<div class="container mx-auto pt-16 flex justify-around flex-wrap">
-    <app-match-card></app-match-card>
-    <app-card title="my tables" class="w-5/12">
-        <div id="tables" class="m-5 text-xl uppercase">
-            <div class="grid grid-cols-2 font-sans p-3 pb-2 bg-white border-black border-b">
-                <div class="font-bold">Name</div>
-                <div class="pl-15">Location</div>
-            </div>
-            <div class="grid grid-cols-2 font-sans p-3 bg-white">
-                <div class="font-bold">Refter tafel 2</div>
-                <div class="">
-                    <div>Grote straat 6</div>
-                    <div>1234 De stad</div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 font-sans p-3 bg-white">
-                <div class="font-bold">Refter tafel 1</div>
-                <div class="">
-                    <div>Grote straat 6</div>
-                    <div>1234 De stad</div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 font-sans p-3 bg-white">
-                <div class="font-bold">Kelder tafel</div>
-                <div class="">
-                    <div>Kleine baan 9</div>
-                    <div>4321 het dorp</div>
-                </div>
-            </div>
-        </div>
-    </app-card>
+<div class="container mx-auto md:pt-16 flex justify-around flex-wrap">
+    <app-match-card  class="w-full md:w-5/12"></app-match-card>
+    <app-tables-card class="w-full md:w-5/12"></app-tables-card>
 </div>
