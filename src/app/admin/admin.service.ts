@@ -12,7 +12,15 @@ export class AdminService {
   constructor(private http: HttpClient) { }
 
   //USERS
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>("https://localhost:44340/api/user/");
+  }
+
   addUser(newUser: User): Observable<User> {
-    return this.http.post<User>("http://localhost:44340/api/user/", newUser);
+    return this.http.post<User>("https://localhost:44340/api/user/", newUser);
+  }
+
+  deleteUser(userID: number): Observable<User> {
+    return this.http.delete<User>("https://localhost:44340/api/user/" + userID);
   }
 }
