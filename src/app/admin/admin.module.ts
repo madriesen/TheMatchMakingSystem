@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 import { AddUserComponent } from './user/add-user/add-user.component';
-import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user/user.component';
 
@@ -15,7 +14,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [AddUserComponent, EditUserComponent, AdminComponent, UserComponent],
+  declarations: [AddUserComponent, AdminComponent, UserComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
