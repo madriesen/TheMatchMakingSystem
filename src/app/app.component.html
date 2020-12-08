@@ -1,13 +1,2 @@
-<mat-toolbar color="primary">
-
-  <span>Title</span>
-  <a mat-button routerLink="/" > Home </a>
-  <span class="spacer"></span>
-  <button mat-button [matMenuTriggerFor]="menu"><span class="material-icons">account_circle</span></button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/login">Login</button>
-    
-  </mat-menu>
-</mat-toolbar>
 
 <router-outlet></router-outlet>

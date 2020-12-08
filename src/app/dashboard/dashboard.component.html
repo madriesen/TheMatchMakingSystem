@@ -1,0 +1,43 @@
+<nav id="navbar"
+    class="fixed md:top-0 md:left-0 md:h-screen md:w-64 bg-black text-white py-6 font-square text-2xl overflow-scroll bottom-0 w-screen h-24 justify-center px-5 md:px-0">
+    <div class="h-full flex md:flex-col flex-row justify-around align-middle md:justify-start">
+        <div class="flex flex-col justify-center items-center md:mb-8">
+            <div class="rounded-full md:w-44 md:h-44 bg-gray-300 md:mb-5 w-10 h-10"></div>
+            <div class="text-xl hidden md:inline"><span *ngIf="firstName">{{firstName}}</span> &nbsp; <span *ngIf="lastName">{{lastName}}</span></div>
+        </div>
+        <a routerLink="./matches" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            class="lowercase justify-center md:justify-start items-center md:py-8 md:pl-8 md:w-full md:hover:bg-white md:hover:text-black flex">
+            <span class="mr-4">
+                <fa-icon [icon]="faFutbol"></fa-icon>
+            </span>
+            <span class="hidden md:block">matches</span>
+
+        </a>
+        <a routerLink="./tournaments" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            class="lowercase justify-center md:justify-start items-center md:py-8 md:pl-8 md:w-full md:hover:bg-white md:hover:text-black flex">
+            <span class="mr-4">
+                <fa-icon [icon]="faChess"></fa-icon>
+            </span>
+            <span class="hidden md:block">tournaments</span>
+        </a>
+        <a routerLink="./tables" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            class="lowercase justify-center md:justify-start items-center md:py-8 md:pl-8 md:w-full md:hover:bg-white md:hover:text-black flex">
+            <span class="mr-4">
+                <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+            </span>
+            <span class="hidden md:block">tables</span>
+        </a>
+        <a routerLink="/logout" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            class="lowercase justify-center md:justify-start items-center md:mt-auto md:py-8 md:pl-8 md:w-full md:hover:bg-white md:hover:text-black flex">
+            <span class="mr-4">
+                <fa-icon [icon]="faPowerOff"></fa-icon>
+            </span>
+            <span class="hidden md:block">logout</span>
+        </a>
+    </div>
+
+</nav>
+
+<div class="ml-0 md:ml-64">
+    <router-outlet></router-outlet>
+</div>
