@@ -21,7 +21,6 @@ export class AddUserComponent implements OnInit {
     address: [''],
     town: [''],
     zipcode: [''],
-    dob: [''],
     roleId: 1
   })
 

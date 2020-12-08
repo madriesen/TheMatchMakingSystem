@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../competitions/models/user.model';
 
@@ -13,11 +13,17 @@ export class AdminService {
 
   //USERS
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>("https://localhost:5001/api/user/");
+
+    return this.http.get<User[]>("https://localhost:5001/api/user", {
+        headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem("token"))
+      });
   }
 
   addUser(newUser: User): Observable<User> {
-    return this.http.post<User>("https://localhost:5001/api/user/", newUser);
+    return this.http.post<User>("https://localhost:5001/api/user/", newUser, {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem("token"))
+    });
+
   }
 
   deleteUser(userID: number): Observable<User> {
