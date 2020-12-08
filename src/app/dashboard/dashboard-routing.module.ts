@@ -17,7 +17,8 @@ const dashboardRoutes: Routes = [
           { path: 'overview', component: OverviewComponent },
           { path: 'matches', component: CompetitionComponent },
           { path: 'tournaments', component: CompetitionComponent },
-          { path: 'tables', component: CompetitionComponent }
+          { path: 'tables', component: CompetitionComponent },
+          { path: 'competitions', component: CompetitionComponent }
         ]
       }
     ]

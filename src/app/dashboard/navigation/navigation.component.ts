@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,6 +13,8 @@ export class NavigationComponent implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
   faPowerOff = faPowerOff;
   faChalkboardTeacher = faChalkboardTeacher;
+  faMedal = faMedal;
+  
   constructor() { }
 
   ngOnInit(): void {
