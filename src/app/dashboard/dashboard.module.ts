@@ -11,6 +11,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NavitemComponent } from './navigation/navitem/navitem.component';
 import { CardComponent } from './overview/card/card.component';
 import { ShortMatchComponent } from './overview/card/short-match/short-match.component';
+import { MatchCardComponent } from './overview/match-card/match-card.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ShortMatchComponent } from './overview/card/short-match/short-match.com
     NavigationComponent,
     NavitemComponent,
     CardComponent,
-    ShortMatchComponent
+    ShortMatchComponent,
+    MatchCardComponent
   ],
   bootstrap: [DashboardComponent]
 })
