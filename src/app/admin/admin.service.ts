@@ -25,6 +25,8 @@ export class AdminService {
   }
 
   deleteUser(userID: number): Observable<User> {
-    return this.http.delete<User>("https://localhost:5001/api/user/" + userID);
+    return this.http.delete<User>("https://localhost:5001/api/user/" + userID, {
+      headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem("token"))
+    });
   }
 }
