@@ -1,0 +1,11 @@
+<app-card title="my tables">
+    <div id="tables" class="m-5 text-sm md:text-xl uppercase">
+        <div class="grid grid-cols-2 font-sans p-3 pb-2 bg-white border-black border-b">
+            <div class="font-bold">Name</div>
+            <div class="pl-15">Location</div>
+        </div>
+        <div *ngFor="let table of tables; let i = index">
+            <app-short-table [table]="table"></app-short-table>
+        </div>
+    </div>
+</app-card>

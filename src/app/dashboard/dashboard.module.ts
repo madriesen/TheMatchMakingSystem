@@ -9,6 +9,11 @@ import { DashboardComponent } from './dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavitemComponent } from './navigation/navitem/navitem.component';
+import { CardComponent } from './overview/card/card.component';
+import { ShortMatchComponent } from './overview/match-card/short-match/short-match.component';
+import { MatchCardComponent } from './overview/match-card/match-card.component';
+import { TablesCardComponent } from './overview/tables-card/tables-card.component';
+import { ShortTableComponent } from './overview/tables-card/short-table/short-table.component';
 
 
 @NgModule({
@@ -22,7 +27,12 @@ import { NavitemComponent } from './navigation/navitem/navitem.component';
     DashboardComponent,
     OverviewComponent,
     NavigationComponent,
-    NavitemComponent
+    NavitemComponent,
+    CardComponent,
+    ShortMatchComponent,
+    MatchCardComponent,
+    TablesCardComponent,
+    ShortTableComponent
   ],
   bootstrap: [DashboardComponent]
 })
