@@ -1,27 +1,6 @@
-<nav id="navbar" class="fixed top-0 left-0 h-screen w-64 bg-black text-white py-6 font-square text-2xl">
-    <div class="h-full flex flex-col">
-        <div class="flex flex-col justify-center items-center mb-8">
-            <div class="rounded-full w-44 h-44 bg-gray-300 mb-5"></div>
-            <div class="text-xl">Firstname Lastname</div>
-        </div>
-        <div class="lowercase py-8 pl-8 w-full hover:bg-white hover:text-black flex"><span class="mr-4">
-                <fa-icon [icon]="faFutbol"></fa-icon>
-            </span>
-            matches
-        </div>
-        <div class="lowercase py-8 pl-8 w-full hover:bg-white hover:text-black flex"><span class="mr-4">
-                <fa-icon [icon]="faChess"></fa-icon>
-            </span>
-            tournaments
-        </div>
-        <div class="lowercase py-8 pl-8 w-full hover:bg-white hover:text-black flex"><span class="mr-4">
-                <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
-            </span>
-            tables</div>
-        <div class="lowercase mt-auto py-8 pl-8 w-full hover:bg-white hover:text-black flex"><span class="mr-4">
-                <fa-icon [icon]="faPowerOff"></fa-icon>
-            </span>
-            logout</div>
-    </div>
 
-</nav>
+<app-navigation></app-navigation>
+
+<div class="ml-0 md:ml-64">
+    <router-outlet></router-outlet>
+</div>

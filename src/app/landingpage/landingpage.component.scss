@@ -28,7 +28,10 @@
 .background-image {
     position: fixed;
     width: 100%;
-    height: 800px;
+    height: 30vh;
+    @media screen and (min-width: 600px) {
+        height: 800px;        
+    }
     left: 0px;
     bottom: 0;
     background: url("/assets/img/soccer_table_perspective.jpg");
