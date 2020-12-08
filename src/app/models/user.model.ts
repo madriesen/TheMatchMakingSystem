@@ -7,16 +7,15 @@ export class User {
         public firstName: string = "",
         public lastName: string = "",
         public email: string = "",
+        public password: string = "",
         public dob: Date = null,
         public address: string = "", 
         public town: string = "",
         public zipCode: string = "",
-        public username: string = "",
-        public password: string = "",
         public roleId: number = 0,
-        public role: Role,  
+        public role: Role = null,  
         public ploegId: number = 0,
-        public ploeg: Ploeg, 
+        public ploeg: Ploeg = null, 
         public token: string =""
         
     ) { }

@@ -8,16 +8,18 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {SecurityModule} from './security/security.module';
-import {LoginComponent} from './security/login/login.component'
-
-
+import {LoginComponent} from './security/login/login.component';
+import {RegisterComponent} from './security/register/register.component';
+import { SecurityInterceptor } from './security/security.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
     
    
   
@@ -31,7 +33,11 @@ import {LoginComponent} from './security/login/login.component'
     FontAwesomeModule,
     SecurityModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: SecurityInterceptor,
+    multi: true
+    }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

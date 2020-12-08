@@ -38,7 +38,7 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
   private location: string;
-  user: User ;
+  
 
 
   constructor(private _authenticateService : AuthenticateService, private _authenticatedUser: AuthenticatedUserService, private router: Router) {
