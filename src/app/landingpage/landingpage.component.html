@@ -5,6 +5,8 @@
         <a (click)="setLocation('welcome')" href="#">
             <h1 class="font-square uppercase text-xl md:text-4xl">The GAME MAKER System</h1>
         </a>
+
+        
     </div>
 
     <div *ngIf="getLocation() == 'welcome'" [@inOutAnimation] id="welcome"
@@ -25,10 +27,13 @@
             your chance!
             Become a member of The Game Maker System and start creating tournaments for your company! Create a team and
             challenge other teams!
+            
             <p class="font-bold text-xl pt-5">Can you end up on top of the leaderboard?</p>
         </div>
     </div>
 
+    <app-login *ngIf="getLocation() == 'login'"></app-login>
+   
 
     <div *ngIf="getLocation() == 'login'" [@inOutAnimation] id="login"
         class="relative flex flex-col items-center z-50 overflow-hidden">
