@@ -3,6 +3,7 @@ import { faFutbol } from '@fortawesome/free-solid-svg-icons';
 import { faChess } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -17,8 +18,13 @@ export class DashboardComponent implements OnInit {
   faPowerOff = faPowerOff;
 
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
+
+  
+  firstName= localStorage.getItem("firstName") || null;;
+  lastName =  localStorage.getItem("lastName") || null;;
+
 
 }
