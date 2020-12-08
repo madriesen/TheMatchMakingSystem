@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
   users: User[]
-  displayedCollums: string[] = ['first name', 'last name', 'email', 'username', 'address', 'town', 'zipcode', 'birthday']
+  displayedColumns: string[] = ['first name', 'last name', 'email', 'username', 'address', 'town', 'zipcode', 'birthday']
   dataSource: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

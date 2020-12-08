@@ -13,14 +13,14 @@ export class AdminService {
 
   //USERS
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>("https://localhost:44340/api/user/");
+    return this.http.get<User[]>("https://localhost:5001/api/user/");
   }
 
   addUser(newUser: User): Observable<User> {
-    return this.http.post<User>("https://localhost:44340/api/user/", newUser);
+    return this.http.post<User>("https://localhost:5001/api/user/", newUser);
   }
 
   deleteUser(userID: number): Observable<User> {
-    return this.http.delete<User>("https://localhost:44340/api/user/" + userID);
+    return this.http.delete<User>("https://localhost:5001/api/user/" + userID);
   }
 }
