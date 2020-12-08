@@ -17,6 +17,7 @@ import {MatMenuModule} from '@angular/material/menu'
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -33,6 +34,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    MatPaginatorModule,
     HttpClientModule,
     FormsModule,
     Ng2SearchPipeModule,
@@ -53,6 +55,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    MatPaginatorModule,
     HttpClientModule,
     FormsModule,
     Ng2SearchPipeModule,
