@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-navigation',
@@ -15,9 +17,14 @@ export class NavigationComponent implements OnInit {
   faChalkboardTeacher = faChalkboardTeacher;
   faMedal = faMedal;
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  logout(){
+    // todo: implement logout
+    this.router.navigate(['/']);
   }
 
 }
