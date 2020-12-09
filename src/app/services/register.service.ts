@@ -12,7 +12,7 @@ export class RegisterService {
 
   register(user: User): Observable<User> {
     
-    return this.http.post<User>("https://localhost:5001/api/user/", user);
+    return this.http.post<User>(process.env.API_ENDPOINT + "/user/", user);
 
   }
 }
