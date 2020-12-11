@@ -1,22 +1,22 @@
 <div class="min-h-screen bg-black text-white">
 
     <div class="relative flex flex-col items-center z-50 transition-all duration-500 mb-8 md:mb-16"
-        [ngClass]="(getLocation() == 'welcome') ? 'pt-40': 'pt-20'">
-        <a (click)="setLocation('welcome')" href="#">
+        [ngClass]="(selectedLocation == 'welcome') ? 'pt-40': 'pt-20'">
+        <a (click)="showPage('welcome')" href="#">
             <h1 class="font-square uppercase text-xl md:text-4xl">The GAME MAKER System</h1>
         </a>
 
         
     </div>
 
-    <div *ngIf="getLocation() == 'welcome'" [@inOutAnimation] id="welcome"
+    <div *ngIf="selectedLocation == 'welcome'" [@inOutAnimation] id="welcome"
         class="relative flex flex-col items-center z-50 overflow-hidden">
         <div>
-            <button type='button' (click)="setLocation('register')"
+            <button type='button' (click)="showPage('register')"
                 class="px-16 py-3 bg-primary uppercase rounded-full font-square text-base md:text-3xl">Register
                 now!</button>
         </div>
-        <div class="mt-3 font-square">Already registered? <button type='button' (click)="setLocation('login')"><span
+        <div class="mt-3 font-square">Already registered? <button type='button' (click)="showPage('login')"><span
                     class="inline-block font-bold sign-in">Sign
                     in!</span></button>
         </div>
@@ -32,8 +32,8 @@
         </div>
     </div>
 
-    <app-login *ngIf="location == 'login'"></app-login>
-    <app-register  *ngIf="location == 'register'"></app-register>
+    <app-login *ngIf="selectedLocation == 'login'"  [location]="selectedLocation"  (chooseLocation)="onChooseLocation($event)"></app-login>
+    <app-register  *ngIf="selectedLocation == 'register'" [location]="selectedLocation" (chooseLocation)="onChooseLocation($event)"></app-register>
     
 
     <div class="background-image"></div>

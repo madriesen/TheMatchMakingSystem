@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import {Router} from "@angular/router";
 import { User } from 'src/app/models/user.model';
@@ -41,15 +41,20 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  private location: string;
-
-  public setLocation(location: string): void {
-    this.location = location;
+  @Input() location: string;
+  @Output() chooseLocation = new EventEmitter<string>();
+  choose(l: string)
+  {
+    this.chooseLocation.emit(l);
   }
 
-  public getLocation(): string {
-    return this.location;
-  }
+  // public setLocation(location: string): void {
+  //   this.location = location;
+  // }
+
+  // public getLocation(): string {
+  //   return this.location;
+  // }
 
 
 submitted: boolean= false

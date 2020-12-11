@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user/user.component';
+import { TablesComponent } from './tables/tables.component';
 
 
 const appRoutes: Routes = [
@@ -14,7 +15,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [AddUserComponent, AdminComponent, UserComponent],
+  declarations: [AddUserComponent, AdminComponent, UserComponent, TablesComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),

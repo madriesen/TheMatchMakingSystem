@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { UserLogin } from 'src/app/models/user-login.model';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
@@ -37,7 +37,7 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  private location: string;
+  // location: string;
   
 
 
@@ -48,14 +48,21 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input()
-  public setLocation(location: string): void {
-    this.location = location;
+  @Input() location: string;
+  @Output() chooseLocation = new EventEmitter<string>();
+  choose(l: string)
+  {
+    this.chooseLocation.emit(l);
+    
   }
 
-  public getLocation(): string {
-    return this.location;
-  }
+  // public setLocation(location: string): void {
+  //   this.chooseLocation.emit(location);
+  // }
+
+  // public getLocation(): string {
+  //   return this.location;
+  // }
 
   submitted: boolean= false
   userLogin: UserLogin = new UserLogin("", "");

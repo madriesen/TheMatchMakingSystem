@@ -31,18 +31,22 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class LandingpageComponent implements OnInit {
 
-   location: string;
+   selectedLocation: string;
 
   constructor() {
-    this.location = 'welcome';
+    this.selectedLocation = 'welcome';
   }
 
-  public setLocation(location: string): void {
-    this.location = location;
+
+  showPage(location: string)
+  {
+    this.selectedLocation = location;
   }
 
-  public getLocation(): string {
-    return this.location;
+  onChooseLocation(location: string)
+  {
+    this.selectedLocation = location
+    //console.log("chosen location: "+ location)
   }
 
   ngOnInit(): void {
