@@ -1,0 +1,13 @@
+<app-card title="Klassement">
+    <div id="competition" class="m-5 text-sm md:text-xl uppercase">
+        <div class="grid grid-cols-6 font-sans p-3 pb-2 bg-white font-bold border-black border-b">
+            <div class="text-center">nr.</div>
+            <div class="col-span-4">team</div>
+            <div class="text-center">pnt.</div>
+        </div>
+
+        <div *ngFor="let team of getSortedTeams(); let i = index">
+            <app-competition-team [nr]="(i+1)" [name]="team['name']" [points]="team['points']"></app-competition-team>
+        </div>
+    </div>
+</app-card>

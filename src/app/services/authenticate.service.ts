@@ -3,20 +3,19 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserLogin } from '../models/user-login.model';
 import { User } from '../models/user.model';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticateService {
 
-  constructor(private _httpClient: HttpClient) 
-  { 
-    
+  constructor(private _httpClient: HttpClient) {
+
   }
 
-  authenticate(userLogin: UserLogin): Observable<User> 
-  {
+  authenticate(userLogin: UserLogin): Observable<User> {
     //check port!!
-    return this._httpClient.post<User>("https://localhost:5001/api/User/authenticate", userLogin);
+    return this._httpClient.post<User>(environment.API_ENDPOINT + "/User/authenticate", userLogin);
   }
 }

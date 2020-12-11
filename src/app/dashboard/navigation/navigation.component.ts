@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-navigation',
@@ -13,9 +15,16 @@ export class NavigationComponent implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
   faPowerOff = faPowerOff;
   faChalkboardTeacher = faChalkboardTeacher;
-  constructor() { }
+  faMedal = faMedal;
+  
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  logout(){
+    // todo: implement logout
+    this.router.navigate(['/']);
   }
 
 }
