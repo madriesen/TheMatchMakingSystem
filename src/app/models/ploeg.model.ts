@@ -5,7 +5,7 @@ export class Ploeg {
         public name: string = "",
         public companyName: string = "",
         public location: string = "", 
-        public capitainID: number = 0,
+        public UserID: number = 0,
 
     ) { }
 }
