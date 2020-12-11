@@ -12,7 +12,7 @@ export class TablesService {
 
   getTables(): Observable<Table[]> 
   {
-    return this.http.get<Table[]>("https://foosballapi20201208154849.azurewebsites.net/api/Table");
+    return this.http.get<Table[]>(environment.API_ENDPOINT + "/Table");
   }
 
 
