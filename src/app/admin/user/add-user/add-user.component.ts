@@ -18,7 +18,6 @@ export class AddUserComponent implements OnInit {
     firstName: [''],
     lastName: [''],
     email: [''],
-    username: [''],
     password: [''],
     address: [''],
     town: [''],

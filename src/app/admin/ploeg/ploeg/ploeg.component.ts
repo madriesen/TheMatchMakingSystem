@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ploeg } from 'src/app/models/ploeg.model';
+import { User } from 'src/app/competitions/models/user.model';
 
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
@@ -15,11 +16,14 @@ import { Router } from '@angular/router';
 })
 export class PloegComponent implements OnInit {
   ploegen: Ploeg[]
-  displayedColumns: string[] = ['name', 'company name', 'location', 'captain', 'deletePloeg']
+  displayedColumns: string[] = ['name', 'company name', 'address', 'town', 'zipcode', 'captain' , 'deletePloeg']
   dataSource: MatTableDataSource<Ploeg>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+
+  users: User[];
+  selectedUser: number = null;
 
   constructor(private _ploegService: AdminService, private route: Router) {
     this.ngOnInit();
@@ -33,9 +37,18 @@ export class PloegComponent implements OnInit {
     this._ploegService.getPloegen().subscribe(
       result => {
         this.ploegen = result;
+        result.forEach(ploeg => {
+          console.log(ploeg['userID']);
+          this._ploegService.getUser(ploeg['userID']).subscribe(
+            result2 => {
+              ploeg['user'] = result2;
+            }
+          );
+        })
         this.dataSource = new MatTableDataSource(this.ploegen);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        console.log(this.ploegen);
       }
     );
   }
@@ -48,6 +61,10 @@ export class PloegComponent implements OnInit {
     this._ploegService.deletePloeg(id).subscribe(
       result => this.getPloegen()
     );
+  }
+
+  editPloeg(id) {
+    this.route.navigate(['/editPloeg'], { queryParams: {id}});
   }
 
 }

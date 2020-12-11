@@ -14,6 +14,10 @@ export class AdminService {
   constructor(private http: HttpClient) { }
 
   //USERS
+  getUser(UserID: number): Observable<User> {
+    return this.http.get<User>(environment.API_ENDPOINT + "/user/" + UserID)
+  }
+
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(environment.API_ENDPOINT + "/user");
   }
@@ -28,17 +32,23 @@ export class AdminService {
   }
 
   //PLOEGEN
+  getPloegById(PloegID: number): Observable<Ploeg> {
+    return this.http.get<Ploeg>(environment.API_ENDPOINT + "/ploeg/" + PloegID);
+  }
+
   getPloegen(): Observable<Ploeg[]> {
     return this.http.get<Ploeg[]>(environment.API_ENDPOINT + "/ploeg");
   }
 
   addPloeg(newPloeg: Ploeg): Observable<Ploeg> {
     return this.http.post<Ploeg>(environment.API_ENDPOINT + "/ploeg/", newPloeg);
-
   }
 
   deletePloeg(PloegID: number): Observable<Ploeg> {
     return this.http.delete<Ploeg>(environment.API_ENDPOINT + "/ploeg/" + PloegID);
+  }
 
+  updatePloeg(PloegID: number, ploeg: Ploeg): Observable<Ploeg> {
+    return this.http.put<Ploeg>(environment.API_ENDPOINT + "/ploeg/" + PloegID, ploeg); 
   }
 }
