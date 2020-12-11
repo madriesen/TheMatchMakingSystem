@@ -17,12 +17,10 @@ export class NavigationComponent implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
   faPowerOff = faPowerOff;
   faChalkboardTeacher = faChalkboardTeacher;
-  constructor(private _authenticatedUserService: AuthenticatedUserService) { }
+  constructor(private _authenticatedUserService: AuthenticatedUserService, private router: Router) { }
 
   faMedal = faMedal;
   
-  constructor(private router: Router) { }
-
   ngOnInit(): void {
     this.getAuthUser()
   }
