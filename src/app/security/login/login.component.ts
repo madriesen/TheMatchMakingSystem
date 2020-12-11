@@ -4,44 +4,21 @@ import { UserLogin } from 'src/app/models/user-login.model';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { AuthenticatedUserService } from 'src/app/services/authenticated-user.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  animations: [
-    trigger(
-      'inOutAnimation',
-      [
-        transition(
-          ':enter',
-          [
-            style({ height: 0, opacity: 0 }),
-            animate('1s ease-out',
-              style({ height: 300, opacity: 1 }))
-          ]
-        ),
-        transition(
-          ':leave',
-          [
-            style({ height: 300, opacity: 1 }),
-            animate('1s ease-in',
-              style({ height: 0, opacity: 0 }))
-          ]
-        )
-      ]
-    )
-  ]
 })
 export class LoginComponent implements OnInit {
 
   // location: string;
-  
 
 
-  constructor(private _authenticateService : AuthenticateService, private _authenticatedUser: AuthenticatedUserService, private router: Router) {
+
+  constructor(private _authenticateService: AuthenticateService, private _authenticatedUser: AuthenticatedUserService, private router: Router) {
     this.location = 'welcome';
   }
 
@@ -50,26 +27,26 @@ export class LoginComponent implements OnInit {
 
   @Input() location: string;
   @Output() chooseLocation = new EventEmitter<string>();
-  choose(l: string)
-  {
+  choose(l: string) {
     this.chooseLocation.emit(l);
-    
+
   }
 
-  submitted: boolean= false
+  submitted: boolean = false
   userLogin: UserLogin = new UserLogin("", "");
   login() {
     this.submitted = true;
     this._authenticateService.authenticate(this.userLogin).subscribe(result => {
-    localStorage.setItem("token",result.token);
-    this._authenticatedUser.setAuthenticatedUser(result)
-    localStorage.setItem("firstName",result.firstName);
-    localStorage.setItem("lastName",result.lastName);
-    //localStorage.setItem("role",result.role.name);
+      localStorage.setItem("token", result.token);
+      this._authenticatedUser.setAuthenticatedUser(result)
+      localStorage.setItem("firstName", result.firstName);
+      localStorage.setItem("lastName", result.lastName);
+      this.router.navigate(['/dashboard']);
+    }, error => {
+      console.log('error', error)
     });
-    
-    this.router.navigate(['/dashboard']);
-    
+
+
   }
 
 }

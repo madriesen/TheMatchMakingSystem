@@ -14,13 +14,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
           [
             style({ height: 0, opacity: 0 }),
             animate('1s ease-out',
-              style({ height: 300, opacity: 1 }))
+              style({ height: 500, opacity: 1 }))
           ]
         ),
         transition(
           ':leave',
           [
-            style({ height: 300, opacity: 1 }),
+            style({ height: 500, opacity: 1 }),
             animate('1s ease-in',
               style({ height: 0, opacity: 0 }))
           ]
@@ -31,20 +31,18 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class LandingpageComponent implements OnInit {
 
-   selectedLocation: string;
+  selectedLocation: string;
 
   constructor() {
     this.selectedLocation = 'welcome';
   }
 
 
-  showPage(location: string)
-  {
+  showPage(location: string) {
     this.selectedLocation = location;
   }
 
-  onChooseLocation(location: string)
-  {
+  onChooseLocation(location: string) {
     this.selectedLocation = location
     //console.log("chosen location: "+ location)
   }
