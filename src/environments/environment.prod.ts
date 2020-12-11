@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_ENDPOINT: 'http://localhost:5001/api'
+  API_ENDPOINT: 'https://foosballapi20201208154849.azurewebsites.net/api'
 };
