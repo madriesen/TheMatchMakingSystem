@@ -48,14 +48,6 @@ export class RegisterComponent implements OnInit {
     this.chooseLocation.emit(l);
   }
 
-  // public setLocation(location: string): void {
-  //   this.location = location;
-  // }
-
-  // public getLocation(): string {
-  //   return this.location;
-  // }
-
 
 submitted: boolean= false
 userModel: User =  new User();
@@ -64,10 +56,7 @@ register()
   {
     this.submitted = true;
     this.userModel.roleId = 1;
-    //this.userModel.dob = this.datePipe.transform('')
     this._registerService.register(this.userModel)
-    
-    console.log(this.userModel.dob)
 
   }
 
