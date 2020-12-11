@@ -5,14 +5,14 @@
             <div class="rounded-full md:w-44 md:h-44 bg-gray-300 md:mb-5 w-10 h-10"></div>
             <div class="text-xl hidden md:inline"><span *ngIf="firstName">{{firstName}}&nbsp;{{lastName}}</span></div> 
         </div>
-        <app-navitem [icon]="faChalkboardTeacher" link="./overview" text="dashboard"></app-navitem>
-        <app-navitem [icon]="faChalkboardTeacher" link="./users" text="Users"></app-navitem>
+        <app-navitem [icon]="faChalkboardTeacher" link="./overview" text="Dashboard"></app-navitem>
+        <app-navitem [icon]="faChalkboardTeacher" link="./users" text="Gebruikers"></app-navitem>
         <app-navitem [icon]="faChalkboardTeacher" link="./tables" text="Tafels"></app-navitem>
-        <app-navitem [icon]="faFutbol" link="./matches" text="matches"></app-navitem>
-        <app-navitem [icon]="faChess" link="./tournaments" text="tournaments"></app-navitem>
-        <app-navitem [icon]="faMapMarkerAlt" link="./tables" text="tables"></app-navitem>
+        <app-navitem [icon]="faFutbol" link="./matches" text="Wedstrijden"></app-navitem>
+        <app-navitem [icon]="faChess" link="./tournaments" text="Toornooien"></app-navitem>
+        <app-navitem [icon]="faMapMarkerAlt" link="./tables" text="Tafels"></app-navitem>
    <app-navitem [icon]="faMedal" link="./competitions" text="Klassement"></app-navitem>
 
-        <app-navitem class="md:mt-auto" [icon]="faPowerOff" link="/logout" text="logout"></app-navitem>
+        <app-navitem class="md:mt-auto" [icon]="faPowerOff" link="/logout" text="Afmelden"></app-navitem>
     </div>
 </nav>
