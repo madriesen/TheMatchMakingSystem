@@ -5,26 +5,26 @@
 
                 <!-- input first name -->
                 <div class="flex flex-col mb-8">
-                    <label class="font-square uppercase pb-2" for="first_name">First name</label>
+                    <label class="font-square uppercase pb-2" for="first_name">Voornaam</label>
                     <input class="rounded px-2 py-1 text-black w-full" type="text" [(ngModel)]="userModel.firstName" id="first_name"
                         name="first_name">
                 </div>
 
                 <!-- input last name -->
                 <div class="flex flex-col mb-8">
-                    <label class="font-square uppercase pb-2" for="last_name">Last name</label>
+                    <label class="font-square uppercase pb-2" for="last_name">Achternaam</label>
                     <input class="rounded px-2 py-1 text-black w-full" type="text" [(ngModel)]="userModel.lastName" id="last_name" name="last_name">
                 </div>
 
                  <!-- input dob -->
                 <div class="flex flex-col mb-8">
-                    <label class="font-square uppercase pb-2" for="dob">Date of birth</label>
+                    <label class="font-square uppercase pb-2" for="dob">Geboortedatum</label>
                     <input class="rounded px-2 py-1 text-black w-full" type="date" [(ngModel)]="userModel.dob"  id="dob" name="dob">
                 </div>
 
                 <!-- input email -->
                 <div class="flex flex-col mb-8">
-                    <label class="font-square uppercase pb-2" for="email">Email address</label>
+                    <label class="font-square uppercase pb-2" for="email">E-mailadres</label>
                     <input class="rounded px-2 py-1 text-black w-full" type="email" [(ngModel)]="userModel.email" id="email" name="email">
                 </div>
 
@@ -74,13 +74,14 @@
                 <!-- register button -->
                 <div class="flex flex-col mb-8 pb-64">
                     <div>
-                        <button type="submit" class="w-full py-2 bg-primary uppercase rounded-full font-square text-xl" (click)="register()"  [disabled]="submitted">Register</button>
+                        <button type="submit" class="w-full py-2 bg-primary uppercase rounded-full font-square text-xl" (click)="register()"  [disabled]="submitted">Registreer</button>
                     </div>
                     <div class="mt-3 font-square flex justify-between">
-                        Already registered?
+                       Al geregistreerd?
                         <button type='button'(click)="choose('login')">
+
                             <span class="inline-block font-bold sign-in">
-                                Sign in!
+                                Login!
                             </span>
                         </button>
                     </div>

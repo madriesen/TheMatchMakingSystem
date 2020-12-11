@@ -3,20 +3,19 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserLogin } from '../models/user-login.model';
 import { User } from '../models/user.model';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticateService {
 
-  constructor(private _httpClient: HttpClient) 
-  { 
-    
+  constructor(private _httpClient: HttpClient) {
+
   }
 
-  authenticate(userLogin: UserLogin): Observable<User> 
-  {
-    //check port!!
+  authenticate(userLogin: UserLogin): Observable<User> {
+
     return this._httpClient.post<User>("https://foosballapi20201208154849.azurewebsites.net/api/User/authenticate", userLogin);
   }
 }

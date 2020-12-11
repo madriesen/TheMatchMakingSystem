@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import { faFutbol, faChess, faMapMarkerAlt, faChalkboardTeacher, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/app/competitions/models/user.model';
 import { AuthenticatedUserService } from 'src/app/services/authenticated-user.service';
+
 
 @Component({
   selector: 'app-navigation',
@@ -17,6 +19,10 @@ export class NavigationComponent implements OnInit {
   faChalkboardTeacher = faChalkboardTeacher;
   constructor(private _authenticatedUserService: AuthenticatedUserService) { }
 
+  faMedal = faMedal;
+  
+  constructor(private router: Router) { }
+
   ngOnInit(): void {
     this.getAuthUser()
   }
@@ -29,6 +35,10 @@ authUser: User;
     this.authUser = this._authenticatedUserService.getAuthenticatedUser();
 
   }
-  
+  logout(){
+    // todo: implement logout
+    this.router.navigate(['/']);
+  }
+
 
 }
