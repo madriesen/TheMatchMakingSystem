@@ -34,9 +34,11 @@ export class AdminService {
 
   addPloeg(newPloeg: Ploeg): Observable<Ploeg> {
     return this.http.post<Ploeg>(environment.API_ENDPOINT + "/ploeg/", newPloeg);
+
   }
 
   deletePloeg(PloegID: number): Observable<Ploeg> {
     return this.http.delete<Ploeg>(environment.API_ENDPOINT + "/ploeg/" + PloegID);
+
   }
 }
