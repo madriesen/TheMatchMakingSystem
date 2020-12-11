@@ -56,14 +56,6 @@ export class LoginComponent implements OnInit {
     
   }
 
-  // public setLocation(location: string): void {
-  //   this.chooseLocation.emit(location);
-  // }
-
-  // public getLocation(): string {
-  //   return this.location;
-  // }
-
   submitted: boolean= false
   userLogin: UserLogin = new UserLogin("", "");
   login() {
@@ -71,8 +63,6 @@ export class LoginComponent implements OnInit {
     this._authenticateService.authenticate(this.userLogin).subscribe(result => {
     localStorage.setItem("token",result.token);
     this._authenticatedUser.setAuthenticatedUser(result)
-    //console.log("username", this.userLogin.username)
-    //console.log("password",this.userLogin.password)
     localStorage.setItem("firstName",result.firstName);
     localStorage.setItem("lastName",result.lastName);
     //localStorage.setItem("role",result.role.name);
