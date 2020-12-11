@@ -15,7 +15,7 @@ export class AuthenticateService {
   }
 
   authenticate(userLogin: UserLogin): Observable<User> {
-    //check port!!
+
     return this._httpClient.post<User>(environment.API_ENDPOINT + "/User/authenticate", userLogin);
   }
 }
