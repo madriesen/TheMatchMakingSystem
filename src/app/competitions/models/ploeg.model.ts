@@ -1,3 +1,3 @@
 export class Ploeg {
-    constructor(public name:string,public companyName:string,public location:string, public captainID:number){}
+    constructor(public ploegID:number, public name:string,public companyName:string, public address:string, public town:string, public zipcode:string, public userID:number){}
 }

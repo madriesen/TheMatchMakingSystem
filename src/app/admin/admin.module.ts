@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
 import { AddUserComponent } from './user/add-user/add-user.component';
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

@@ -1,1 +1,46 @@
-<p>edit-ploeg works!</p>
+<h1>Pas ploeg {{ploeg.name}} aan</h1>
+<mat-card id="card">
+    <mat-card-content>
+        <form [formGroup]="editPloegForm" (ngSubmit)="onSubmit()">
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Naam</mat-label>
+                    <input matInput type="text" formControlName="name" [(ngModel)]="ploeg.name" />
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Bedrijf naam</mat-label>
+                    <input matInput type="text" formControlName="companyName" [(ngModel)]="ploeg.companyName" />
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Address</mat-label>
+                    <input matInput type="text" formControlName="address" [(ngModel)]="ploeg.address" />
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Town</mat-label>
+                    <input matInput type="text" formControlName="town"  [(ngModel)]="ploeg.town" />
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Zipcode</mat-label>
+                    <input matInput type="text" formControlName="zipcode"  [(ngModel)]="ploeg.zipcode" />
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Kapitein</mat-label>
+                <mat-select [(value)]="selectedUser">
+                    <mat-option *ngFor="let user of users" [value]="user" [(ngModel)]="ploeg.user">
+                        {{user.firstName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="button" mat-raised-button color="primary" type="submit">Voeg ploeg toe</button>
+        </form>
+    </mat-card-content>
+</mat-card>
