@@ -16,6 +16,6 @@ export class AuthenticateService {
 
   authenticate(userLogin: UserLogin): Observable<User> {
 
-    return this._httpClient.post<User>("https://foosballapi20201208154849.azurewebsites.net/api/User/authenticate", userLogin);
+    return this._httpClient.post<User>(process.env.ENDPOINT + "/User/authenticate", userLogin);
   }
 }
