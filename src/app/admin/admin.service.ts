@@ -15,30 +15,30 @@ export class AdminService {
 
   //USERS
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(environment.API_ENDPOINT + "https://localhost:5001/api/user");
+    return this.http.get<User[]>(environment.API_ENDPOINT + "/user");
   }
 
   addUser(newUser: User): Observable<User> {
-    return this.http.post<User>(environment.API_ENDPOINT + "https://localhost:5001/api/user/", newUser);
+    return this.http.post<User>(environment.API_ENDPOINT + "/user/", newUser);
 
   }
 
   deleteUser(userID: number): Observable<User> {
-    return this.http.delete<User>(environment.API_ENDPOINT + "https://localhost:5001/api/user/" + userID);
+    return this.http.delete<User>(environment.API_ENDPOINT + "/user/" + userID);
   }
 
   //PLOEGEN
   getPloegen(): Observable<Ploeg[]> {
-    return this.http.get<Ploeg[]>(environment.API_ENDPOINT + "https://localhost:5001/api/ploeg");
+    return this.http.get<Ploeg[]>(environment.API_ENDPOINT + "/ploeg");
   }
 
   addPloeg(newPloeg: Ploeg): Observable<Ploeg> {
-    return this.http.post<Ploeg>(environment.API_ENDPOINT + "https://localhost:5001/api/ploeg/", newPloeg);
+    return this.http.post<Ploeg>(environment.API_ENDPOINT + "/ploeg/", newPloeg);
 
   }
 
   deletePloeg(PloegID: number): Observable<Ploeg> {
-    return this.http.delete<Ploeg>(environment.API_ENDPOINT + "https://localhost:5001/api/ploeg/" + PloegID);
+    return this.http.delete<Ploeg>(environment.API_ENDPOINT + "/ploeg/" + PloegID);
 
   }
 }
