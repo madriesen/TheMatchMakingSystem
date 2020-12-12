@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
 
   register() {
     this.submitted = true;
-    this.userModel.roleId = 1;
+    this.userModel.roleID = 1;
     this._registerService.register(this.userModel)
 
   }

@@ -16,6 +16,7 @@ import { TablesCardComponent } from './overview/tables-card/tables-card.componen
 import { ShortTableComponent } from './overview/tables-card/short-table/short-table.component';
 import { CompetitionCardComponent } from './overview/competition-card/competition-card.component';
 import { CompetitionTeamComponent } from './overview/competition-card/competition-team/competition-team.component';
+//import {AddTableComponent} from '../admin/add-table/add-table.component'
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CompetitionTeamComponent } from './overview/competition-card/competitio
     TablesCardComponent,
     ShortTableComponent,
     CompetitionCardComponent,
-    CompetitionTeamComponent
+    CompetitionTeamComponent,
+    //AddTableComponent
   ],
   bootstrap: [DashboardComponent]
 })

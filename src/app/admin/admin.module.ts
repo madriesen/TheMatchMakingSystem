@@ -10,6 +10,7 @@ import { TablesComponent } from './tables/tables.component';
 import { PloegComponent } from './ploeg/ploeg/ploeg.component';
 import { AddPloegComponent } from './ploeg/add-ploeg/add-ploeg.component';
 import { EditPloegComponent } from './ploeg/edit-ploeg/edit-ploeg.component';
+import { AddTableComponent } from './add-table/add-table.component';
 
 
 const appRoutes: Routes = [
@@ -17,11 +18,12 @@ const appRoutes: Routes = [
   { path: 'addUser', component: AddUserComponent},
   { path: 'ploegen', component: PloegComponent},
   { path: 'addPloeg', component: AddPloegComponent},
-  { path: 'editPloeg', component: EditPloegComponent}
+  { path: 'editPloeg', component: EditPloegComponent},
+  {path: 'addTable', component: AddTableComponent}
 ]
 
 @NgModule({
-  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent],
+  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, AddTableComponent],
 
   imports: [
     CommonModule,
