@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/competitions/models/user.model';
+import { User } from 'src/app/models/user.model';
 
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';

@@ -1,6 +1,6 @@
 export class Wedstrijd {
     constructor(
-        public ID: number = 0,
+        public wedstrijdID: number = 0,
         public datum:Date = null,
         public rondeNummer:number = 0, 
         public foosballTableID:number = 0, 
