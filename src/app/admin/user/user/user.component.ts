@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/competitions/models/user.model';
+import { User } from 'src/app/models/user.model';
 
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
   users: User[]
-  displayedColumns: string[] = ['first name', 'last name', 'email', 'username', 'address', 'town', 'zipcode', 'birthday', 'deleteUser']
+  displayedColumns: string[] = ['first name', 'last name', 'email', 'address', 'town', 'zipcode', 'birthday', 'deleteUser']
   dataSource: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
