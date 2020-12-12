@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from '../competitions/models/user.model';
+import { User } from '../models/user.model';
 import { Ploeg } from '../models/ploeg.model';
 import { environment } from './../../environments/environment';
+import { Team } from '../models/team.model';
 
 @Injectable({
   providedIn: 'root'
@@ -50,5 +51,26 @@ export class AdminService {
 
   updatePloeg(PloegID: number, ploeg: Ploeg): Observable<Ploeg> {
     return this.http.put<Ploeg>(environment.API_ENDPOINT + "/ploeg/" + PloegID, ploeg); 
+  }
+
+  //TEAMS
+  getTeamById(TeamID: number): Observable<Team> {
+    return this.http.get<Team>(environment.API_ENDPOINT + "/team/" + TeamID);
+  }
+
+  getTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>(environment.API_ENDPOINT + "/team");
+  }
+
+  addTeam(newTeam: Team): Observable<Team> {
+    return this.http.post<Team>(environment.API_ENDPOINT + "/team/", newTeam);
+  }
+
+  deleteTeam(TeamID: number): Observable<Team> {
+    return this.http.delete<Team>(environment.API_ENDPOINT + "/team/" + TeamID);
+  }
+
+  updateTeam(TeamID: number, team: Team): Observable<Team> {
+    return this.http.put<Team>(environment.API_ENDPOINT + "/team/" + TeamID, team); 
   }
 }

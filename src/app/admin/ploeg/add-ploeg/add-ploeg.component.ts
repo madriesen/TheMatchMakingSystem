@@ -4,7 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { AdminService } from '../../admin.service';
 
 import { Router } from '@angular/router';
-import { User } from 'src/app/competitions/models/user.model';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-add-ploeg',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ploeg } from 'src/app/models/ploeg.model';
-import { User } from 'src/app/competitions/models/user.model';
+import { User } from 'src/app/models/user.model';
 
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
@@ -15,8 +15,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./ploeg.component.scss']
 })
 export class PloegComponent implements OnInit {
-  ploegen: Ploeg[]
-  displayedColumns: string[] = ['name', 'company name', 'address', 'town', 'zipcode', 'captain' , 'deletePloeg']
+  ploegen: Ploeg[];
+  displayedColumns: string[] = ['name', 'company name', 'address', 'town', 'zipcode', 'captain' , 'deletePloeg'];
   dataSource: MatTableDataSource<Ploeg>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -44,7 +44,7 @@ export class PloegComponent implements OnInit {
               ploeg['user'] = result2;
             }
           );
-        })
+        });
         this.dataSource = new MatTableDataSource(this.ploegen);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
