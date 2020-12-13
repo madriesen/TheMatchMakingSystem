@@ -3,10 +3,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { Competition } from 'src/app/models/competition.model';
+import { ChallengeService } from 'src/app/services/challenge.service';
 
-import { Competition } from '../models/competition.model';
-import { Team } from '../models/team.model';
-import { ChallengeService } from '../services/challenge.service';
+
 
 @Component({
   selector: 'app-challenge',
@@ -19,7 +19,7 @@ export class ChallengeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCompetitions();
-    this.getTeams();
+    
   }
   
   getCompetitions()
@@ -31,20 +31,7 @@ export class ChallengeComponent implements OnInit {
   }
   chooseCompetition(id:number){
     console.log(id)
-
+    this.route.navigate(['/dashboard/challengeteams'], { queryParams: {id}});
   }
-  teams: Team[];
-  getTeams()
-  {
-    this._serv.getMyTeams().subscribe(result => {
-      this.teams = result; 
-      this.teams.forEach(team =>
-        this._serv.getCompetitionsTeamID(team.teamID).subscribe(wedstrijden => {
-          team.wedstrijden=wedstrijden
-          console.log(wedstrijden)
-        })
-        )
-        console.log(this.teams)
-    });
-  }
+  
 }

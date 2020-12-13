@@ -1,0 +1,35 @@
+<mat-card id="card">
+    <mat-card-content>
+        <form (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Welk team?</mat-label>
+                <mat-select [(value)]="wedstrijd.team1ID">
+                    <mat-option *ngFor="let team of myTeams" [value]="team.teamID" >
+                        {{team.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Welk team wil je uitdagen?</mat-label>
+                <mat-select [(value)]="wedstrijd.team2ID">
+                    <mat-option *ngFor="let team of opponentPloeg.teams" [value]="team.teamID" >
+                        {{team.name || ''}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Welk tafel wil je?</mat-label>
+                <mat-select [(value)]="wedstrijd.tableID">
+                    <mat-option *ngFor="let table of myTables" [value]="table.tableID" >
+                        {{table.name || ''}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field [style.width.px]=700>
+                <mat-label>Birthday</mat-label>
+                <input matInput type="date" [(ngModel)]="wedstrijd.date" name="date"/>
+            </mat-form-field>
+            <button class="button" mat-raised-button color="primary" type="submit">Pas tournooi aan</button>
+        </form>
+    </mat-card-content>
+</mat-card>

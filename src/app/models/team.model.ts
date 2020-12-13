@@ -1,5 +1,6 @@
 import { Ploeg } from "./ploeg.model";
 import { User } from "./user.model";
+import { Wedstrijd } from "./wedstrijd.model";
 
 export class Team {
 
@@ -10,6 +11,7 @@ export class Team {
         public player1ID:number = 0,
         public player1: User = null,
         public player2ID:number = 0,
-        public player2: User = null
+        public player2: User = null,
+        public wedstrijden: Wedstrijd[]=null
         ){}
 }

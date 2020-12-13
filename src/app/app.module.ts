@@ -13,8 +13,9 @@ import {LoginComponent} from './security/login/login.component';
 import {RegisterComponent} from './security/register/register.component';
 import { SecurityInterceptor } from './security/security.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ChallengeComponent } from './challenge/challenge.component';
+
 import { MatSelectModule } from '@angular/material/select';
+
 
 
 
@@ -25,7 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
     LandingpageComponent,
     LoginComponent,
     RegisterComponent,
-    ChallengeComponent
+
+  
     
    
   
@@ -42,6 +44,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule
 
   ],
+  exports:[SharedModule],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: SecurityInterceptor,

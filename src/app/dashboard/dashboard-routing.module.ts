@@ -7,9 +7,12 @@ import { DashboardComponent } from './dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
 
 import {TablesComponent} from '../admin/tables/tables.component'
-import { ChallengeComponent } from '../challenge/challenge.component';
+
 
 import {AddTableComponent} from '../admin/add-table/add-table.component'
+import { ChallengeComponent } from './challenge/challenge.component';
+import { ChallengeteamsComponent } from './challenge/challengeteams/challengeteams.component';
+
 
 
 
@@ -24,7 +27,8 @@ const dashboardRoutes: Routes = [
           { path: 'overview', component: OverviewComponent },
           { path: 'matches', component: CompetitionComponent },
           { path: 'tournaments', component: CompetitionComponent },
-          { path: 'challenge', component: ChallengeComponent },
+          { path: 'challenge', component: ChallengeComponent},
+          { path:'challengeteams', component:ChallengeteamsComponent},
           {path: 'tables', component: TablesComponent },
           // { path: 'tables', 
           // component: TablesComponent ,
