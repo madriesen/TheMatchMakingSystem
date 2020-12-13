@@ -5,6 +5,12 @@
             2 spelers?
         ​​​​​</mat-slide-toggle>
         <form [formGroup]="addTeamForm" (ngSubmit)="onSubmit()">
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Naam</mat-label>
+                    <input matInput type="text" formControlName="name" />
+                </mat-form-field>
+            </div>
             <mat-form-field appearance="fill" class='formfield'>
                 <mat-label>Speler 1</mat-label>
                 <mat-select [(value)]="selectedUser1">
