@@ -7,6 +7,9 @@ import { Ploeg } from '../models/ploeg.model';
 import { environment } from './../../environments/environment';
 import { Team } from '../models/team.model';
 import { Competition } from '../models/competition.model';
+import { Wedstrijd } from '../models/wedstrijd.model';
+import { WedstrijdType } from '../models/wedstrijd-type.model';
+import { Table } from '../models/table.model';
 
 @Injectable({
   providedIn: 'root'
@@ -94,5 +97,38 @@ export class AdminService {
 
   updateCompetition(CompetitionID: number, competition: Competition): Observable<Competition> {
     return this.http.put<Competition>(environment.API_ENDPOINT + "/tournooi/" + CompetitionID, competition); 
+  }
+
+  //WEDSTRIJDEN
+  getWedstrijdById(WedstrijdID: number): Observable<Wedstrijd> {
+    return this.http.get<Wedstrijd>(environment.API_ENDPOINT + "/wedstrijd/" + WedstrijdID);
+  }
+
+  getWedstrijden(): Observable<Wedstrijd[]> {
+    return this.http.get<Wedstrijd[]>(environment.API_ENDPOINT + "/wedstrijd");
+  }
+
+  addWedstrijd(newWedstrijd: Wedstrijd): Observable<Wedstrijd> {
+    return this.http.post<Wedstrijd>(environment.API_ENDPOINT + "/wedstrijd/", newWedstrijd);
+  }
+
+  deleteWedstrijd(WedstrijdID: number): Observable<Wedstrijd> {
+    return this.http.delete<Wedstrijd>(environment.API_ENDPOINT + "/wedstrijd/" + WedstrijdID);
+  }
+
+  updateWedstrijd(WedstrijdID: number, wedstrijd: Wedstrijd): Observable<Wedstrijd> {
+    return this.http.put<Wedstrijd>(environment.API_ENDPOINT + "/wedstrijd/" + WedstrijdID, wedstrijd); 
+  }
+
+  getWedstrijdTypeById(WedstrijdTypeID: number): Observable<WedstrijdType> {
+    return this.http.get<WedstrijdType>(environment.API_ENDPOINT + "/wedstrijdtype" + WedstrijdTypeID);
+  }
+
+  getTableById(TableID: number): Observable<Table> {
+    return this.http.get<Table>(environment.API_ENDPOINT + "/table" + TableID);
+  }
+
+  getTeamWithPloeg(TeamID: number): Observable<Team> {
+    return this.http.get<Team>(environment.API_ENDPOINT + "/team/withploeg" + TeamID);
   }
 }

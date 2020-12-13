@@ -61,7 +61,6 @@ export class CompetitieComponent implements OnInit {
   }
 
   editCompetition(id) {
-    console.log(id);
     this.route.navigate(['/editCompetition'], { queryParams: {id}});
   }
 
