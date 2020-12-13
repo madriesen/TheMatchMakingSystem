@@ -13,6 +13,7 @@ import { AdminService } from '../../admin.service';
 export class AddTeamComponent implements OnInit {
 
   addTeamForm = this.fb.group({
+    name: ['']
   })
 
   users?: User[];

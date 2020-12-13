@@ -3,10 +3,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { Competition } from 'src/app/models/competition.model';
-import { Table } from 'src/app/models/table.model';
-import { Team } from 'src/app/models/team.model';
-import { WedstrijdType } from 'src/app/models/wedstrijd-type.model';
 import { Wedstrijd } from 'src/app/models/wedstrijd.model';
 import { AdminService } from '../../admin.service';
 
@@ -17,7 +13,7 @@ import { AdminService } from '../../admin.service';
 })
 export class WedstrijdComponent implements OnInit {
   wedstrijden: Wedstrijd[];
-  displayedColumns: string[] = ['date', 'type', 'tournooi', 'table', 'team1', 'team2', 'deleteWedstrijd'];
+  displayedColumns: string[] = ['date', 'type', 'tournooi', 'table', 'ploeg1', 'team1 name', 'team11', 'team12', 'ploeg2', 'team2 name', 'team21', 'team22', 'deleteWedstrijd'];
   dataSource: MatTableDataSource<Wedstrijd>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -26,6 +22,7 @@ export class WedstrijdComponent implements OnInit {
   constructor(private _wedstrijdService: AdminService, private route: Router) { }
 
   ngOnInit(): void {
+    this.getWedstrijden();
   }
 
   getWedstrijden() {
@@ -53,11 +50,8 @@ export class WedstrijdComponent implements OnInit {
             tournooi => {
               wedstrijd['tournooi'] = tournooi;
           });
-          this._wedstrijdService.getTeamById(wedstrijd['winnaarID']).subscribe(
-            winnaar => {
-              wedstrijd['winnaar'] = winnaar;
-          });
         });
+        console.log(this.wedstrijden);
         this.dataSource = new MatTableDataSource(this.wedstrijden);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -65,9 +59,6 @@ export class WedstrijdComponent implements OnInit {
     );
   }
   
-  addWedstrijd() {
-    this.route.navigate(['/addWedstrijd']);
-  }
 
   deleteWedstrijd(id) {
     this._wedstrijdService.deleteWedstrijd(id).subscribe(

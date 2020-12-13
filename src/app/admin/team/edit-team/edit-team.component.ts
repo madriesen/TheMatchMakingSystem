@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Team } from 'src/app/models/team.model';
 import { User } from 'src/app/models/user.model';
@@ -11,6 +12,10 @@ import { AdminService } from '../../admin.service';
 })
 export class EditTeamComponent implements OnInit {
 
+  editTeamForm = this.fb.group({
+    name: ['']
+  })
+
   id: number = 0;
   team: Team;
   users?: User[];
@@ -18,9 +23,10 @@ export class EditTeamComponent implements OnInit {
   selectedUser2: User = null;
   isChecked: boolean = false;
 
-  constructor(private _teamService: AdminService, private route: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private _teamService: AdminService, private route: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getUsers();
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params['id'];
       this.findTeam();
@@ -48,7 +54,6 @@ export class EditTeamComponent implements OnInit {
         }
       }
     );
-    this.getUsers();
   }
 
   getUsers() {
