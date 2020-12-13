@@ -15,6 +15,7 @@ import { AddTableComponent } from './add-table/add-table.component';
 import { TeamComponent } from './team/team/team.component';
 import { AddTeamComponent } from './team/add-team/add-team.component';
 import { EditTeamComponent } from './team/edit-team/edit-team.component';
+import { TeamComponent } from './team/team/team.component';
 
 
 const appRoutes: Routes = [
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, AddTableComponent],
+  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, AddTableComponent, TeamComponent],
   { path: 'teams', component: TeamComponent},
   { path: 'addTeam', component: AddTeamComponent},
   { path: 'editTeam', component: EditTeamComponent}
