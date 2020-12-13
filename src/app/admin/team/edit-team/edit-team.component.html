@@ -1,1 +1,24 @@
-<p>edit-team works!</p>
+<h1>Pas team aan</h1>
+<mat-card id="card">
+    <mat-card-content>
+        <form (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Speler 1</mat-label>
+                <mat-select [(ngModel)]="selectedUser1" name="user1">
+                    <mat-option *ngFor="let user of users" [value]="user">
+                        {{user.firstName || "User1 firstName"}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield' *ngIf="isChecked">
+                <mat-label>Speler 2</mat-label>
+                <mat-select [(ngModel)]="selectedUser2" name="user2">
+                    <mat-option *ngFor="let user of users" [value]="user">
+                        {{user.firstName || "User2 firstName"}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="button" mat-raised-button color="primary" type="submit">Voeg team toe</button>
+        </form>
+    </mat-card-content>
+</mat-card>

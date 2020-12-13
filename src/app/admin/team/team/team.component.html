@@ -21,7 +21,7 @@
         
         <ng-container matColumnDef="player2 name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> speler 2 naam </th>
-          <td mat-cell *matCellDef="let row"> {{row.player2.firstName}} </td>
+          <td mat-cell *matCellDef="let row"> {{!!row.player2 ? row.player2.firstName: " " }} </td>
         </ng-container>
 
         

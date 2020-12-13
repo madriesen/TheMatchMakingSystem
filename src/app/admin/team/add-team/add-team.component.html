@@ -1,1 +1,36 @@
-<p>add-team works!</p>
+<h1>Voeg een team toe</h1>
+<mat-card id="card">
+    <mat-card-content>
+        <mat-slide-toggle [(ngModel)]="isChecked">
+            2 spelers?
+        ​​​​​</mat-slide-toggle>
+        <form [formGroup]="addTeamForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Speler 1</mat-label>
+                <mat-select [(value)]="selectedUser1">
+                    <mat-option *ngFor="let user of users" [value]="user">
+                        {{user.firstName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield' *ngIf="isChecked">
+                <mat-label>Speler 2</mat-label>
+                <mat-select [(value)]="selectedUser2">
+                    <mat-option *ngFor="let user of users" [value]="user">
+                        {{user.firstName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Ploeg</mat-label>
+                <mat-select [(value)]="selectedPloeg">
+                    <mat-option *ngFor="let ploeg of ploegen" [value]="ploeg">
+                        {{ploeg.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="button" mat-raised-button color="primary" type="submit">Voeg team toe</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+

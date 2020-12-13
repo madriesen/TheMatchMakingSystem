@@ -18,7 +18,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';    
+import {​​​​​MatSlideToggleModule}​​​​​ from '@angular/material/slide-toggle';
+
 
 
 
@@ -46,7 +48,8 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatTableModule,
     MatDividerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ​​​​​MatSlideToggleModule
   
   ],
   exports: [
@@ -69,7 +72,8 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatTableModule,
     MatDividerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ​​​​​MatSlideToggleModule
     
     
 
