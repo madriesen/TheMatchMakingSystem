@@ -13,6 +13,7 @@ import {LoginComponent} from './security/login/login.component';
 import {RegisterComponent} from './security/register/register.component';
 import { SecurityInterceptor } from './security/security.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     AppComponent,
     LandingpageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChallengeComponent
     
    
   

@@ -1,0 +1,13 @@
+<p>challenge works!</p>
+
+
+<div class="bg-gray-200 rounded-xl my-2 col-3" *ngFor="let comp of competitions" (click)="chooseCompetition(comp.tournooiID)">
+    <div class="text-center border-b border-black">
+        <h1 class="font-square uppercase p-5 text-4xl">{{comp.name}}</h1>
+    </div>
+    <div class="p-2">
+        <div class="text-xl uppercase">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
