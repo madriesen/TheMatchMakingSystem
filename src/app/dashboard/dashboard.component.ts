@@ -21,8 +21,9 @@ export class DashboardComponent implements OnInit {
   }
 
   
-  firstName= localStorage.getItem("firstName") || null;;
-  lastName =  localStorage.getItem("lastName") || null;;
+  firstName= localStorage.getItem("firstName") || null;
+  lastName =  localStorage.getItem("lastName") || null;
+  
 
 
 }
