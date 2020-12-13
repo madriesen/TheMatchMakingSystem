@@ -22,7 +22,6 @@ export class TeamComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   users: User[];
-  selectedUser: number = null;
 
   constructor(private _teamService: AdminService, private route: Router) {
     this.ngOnInit();
@@ -42,11 +41,13 @@ export class TeamComponent implements OnInit {
               team['player1'] = player1;
             }
           );
-          this._teamService.getUser(team['player2ID']).subscribe(
-            player2 => {
-              team['player2'] = player2;
-            }
-          );
+          if (team['player2ID'] != null) {
+            this._teamService.getUser(team['player2ID']).subscribe(
+              player2 => {
+                team['player2'] = player2;
+              }
+            );
+          }
           this._teamService.getPloegById(team['ploegID']).subscribe(
             ploeg => {
               team['ploeg'] = ploeg;
@@ -56,7 +57,6 @@ export class TeamComponent implements OnInit {
         this.dataSource = new MatTableDataSource(this.teams);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        console.log(this.teams);
       }
     );
   }
