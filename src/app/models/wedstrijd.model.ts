@@ -6,7 +6,7 @@ import { WedstrijdType } from "./wedstrijd-type.model";
 export class Wedstrijd {
     constructor(
         public wedstrijdID: number = 0,
-        public datum:Date = null,
+        public date:Date = null,
         public tableID:number = 0, 
         public table:Table = null,
         public wedstrijdTypeID:number = 0,

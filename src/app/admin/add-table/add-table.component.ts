@@ -37,7 +37,7 @@ export class AddTableComponent implements OnInit {
 
 
   submitted: boolean = false;
-  toAddTable: Table = new Table();
+  toAddTable: Table = null;
 
   addTable()
   {

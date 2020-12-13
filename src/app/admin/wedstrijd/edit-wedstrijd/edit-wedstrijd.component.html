@@ -1,1 +1,38 @@
-<p>edit-wedstrijd works!</p>
+<h1>Pas wedstrijd aan</h1>
+<mat-card id="card">
+    <mat-card-content>
+        <form [formGroup]="editWedstrijdForm" (ngSubmit)="onSubmit()">
+            <div>
+                <mat-form-field [style.width.px]=700>
+                    <mat-label>Datum wedstrijd</mat-label>
+                    <input matInput type="date" formControlName="date" [(ngModel)]="wedstrijd.date" />
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Team 1</mat-label>
+                <mat-select [(value)]="selectedTeam1" name="team1">
+                    <mat-option *ngFor="let team of teamsPloeg1" [value]="team" [(ngModel)]="wedstrijd.team1">
+                        {{team.name || "User1 firstName"}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Team 2</mat-label>
+                <mat-select [(value)]="selectedTeam2" name="team2">
+                    <mat-option *ngFor="let team of teamsPloeg2" [value]="team" [(ngModel)]="wedstrijd.team2">
+                        {{team.name || "User2 firstName"}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Tafel</mat-label>
+                <mat-select [(value)]="selectedTable" name="table">
+                    <mat-option *ngFor="let table of tables" [value]="table" [(ngModel)]="wedstrijd.table">
+                        {{table.name || "User2 firstName"}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="button" mat-raised-button color="primary" type="submit">Pas wedstrijd aan</button>
+        </form>
+    </mat-card-content>
+</mat-card>

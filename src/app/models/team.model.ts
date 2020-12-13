@@ -5,6 +5,7 @@ export class Team {
 
     constructor(
         public teamID: number = 0,
+        public name: string = "",
         public ploegID:number = 0,
         public ploeg:Ploeg = null,
         public player1ID:number = 0,

@@ -15,7 +15,7 @@ import { Team } from 'src/app/models/team.model';
 })
 export class TeamComponent implements OnInit {
   teams: Team[];
-  displayedColumns: string[] = ['ploeg name', 'player1 name', 'player2 name', 'deleteTeam'];
+  displayedColumns: string[] = ['ploeg name', 'team name', 'player1 name', 'player2 name', 'deleteTeam'];
   dataSource: MatTableDataSource<Team>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
