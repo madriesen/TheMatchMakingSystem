@@ -22,7 +22,6 @@ export class TeamComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   users: User[];
-  selectedUser: number = null;
 
   constructor(private _teamService: AdminService, private route: Router) {
     this.ngOnInit();

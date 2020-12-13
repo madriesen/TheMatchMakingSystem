@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Team } from 'src/app/models/team.model';
 import { User } from 'src/app/models/user.model';
@@ -19,7 +18,7 @@ export class EditTeamComponent implements OnInit {
   selectedUser2: User = null;
   isChecked: boolean = false;
 
-  constructor(private fb: FormBuilder, private _teamService: AdminService, private route: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private _teamService: AdminService, private route: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -69,7 +68,6 @@ export class EditTeamComponent implements OnInit {
     else {
       this.team.player2ID = null;
     }
-    console.log(this.team);
     this._teamService.updateTeam(this.id, this.team).subscribe();
     this.route.navigate(['/teams'], { queryParams: {"teamUpdated": true }});
   }
