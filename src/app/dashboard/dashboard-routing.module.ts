@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 import { OverviewComponent } from './overview/overview.component';
-import {TablesComponent} from '../admin/tables/tables.component';
-import {AddTableComponent} from '../admin/add-table/add-table.component'
+import {TablesComponent} from '../admin/table/tables/tables.component';
 
 
 const dashboardRoutes: Routes = [
