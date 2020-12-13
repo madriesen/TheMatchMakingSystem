@@ -120,19 +120,34 @@ export class AdminService {
     return this.http.get<WedstrijdType>(environment.API_ENDPOINT + "/wedstrijdtype/" + WedstrijdTypeID);
   }
 
-  getTableById(TableID: number): Observable<Table> {
-    return this.http.get<Table>(environment.API_ENDPOINT + "/table/" + TableID);
-  }
-
   getTeamWithPloeg(TeamID: number): Observable<Team> {
     return this.http.get<Team>(environment.API_ENDPOINT + "/team/withploeg/" + TeamID);
-  }
-
-  getTables(): Observable<Table[]> {
-    return this.http.get<Table[]>(environment.API_ENDPOINT + "/table");
   }
 
   getTeamsByPloegID(PloegID: number): Observable<Team[]> {
     return this.http.get<Team[]>(environment.API_ENDPOINT + "/team/ploeg/" + PloegID);
   }
+
+  //TABLES
+  getTables(): Observable<Table[]> {
+    return this.http.get<Table[]>(environment.API_ENDPOINT + "/table");
+  }
+
+  getTableById(TableID: number): Observable<Table> {
+    return this.http.get<Table>(environment.API_ENDPOINT + "/table/" + TableID);
+  }
+
+  addTable(newTable: Table): Observable<Table> {
+    return this.http.post<Table>(environment.API_ENDPOINT + "/table/", newTable);
+  }
+
+  deleteTable(TableID: number): Observable<Table> {
+    return this.http.delete<Table>(environment.API_ENDPOINT + "/table/" + TableID);
+  }
+
+  getUsersByPloegID(PloegID: number): Observable<User[]> {
+    return this.http.get<User[]>(environment.API_ENDPOINT + "/user/ploeg/" + PloegID);
+  }
+
+
 }
