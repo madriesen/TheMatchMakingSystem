@@ -14,6 +14,9 @@ import { EditPloegComponent } from './ploeg/edit-ploeg/edit-ploeg.component';
 import { TeamComponent } from './team/team/team.component';
 import { AddTeamComponent } from './team/add-team/add-team.component';
 import { EditTeamComponent } from './team/edit-team/edit-team.component';
+import { CompetitieComponent } from './competitie/competitie/competitie.component';
+import { AddCompetitieComponent } from './competitie/add-competitie/add-competitie.component';
+import { EditCompetitieComponent } from './competitie/edit-competitie/edit-competitie.component';
 
 
 const appRoutes: Routes = [
@@ -24,11 +27,14 @@ const appRoutes: Routes = [
   { path: 'editPloeg', component: EditPloegComponent},
   { path: 'teams', component: TeamComponent},
   { path: 'addTeam', component: AddTeamComponent},
-  { path: 'editTeam', component: EditTeamComponent}
+  { path: 'editTeam', component: EditTeamComponent},
+  { path: 'competitions', component: CompetitieComponent},
+  { path: 'addCompetition', component: AddCompetitieComponent},
+  { path: 'editCompetition', component: EditCompetitieComponent}
 ]
 
 @NgModule({
-  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, TeamComponent, AddTeamComponent, EditTeamComponent],
+  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, TeamComponent, AddTeamComponent, EditTeamComponent, CompetitieComponent, AddCompetitieComponent, EditCompetitieComponent],
 
   imports: [
     CommonModule,

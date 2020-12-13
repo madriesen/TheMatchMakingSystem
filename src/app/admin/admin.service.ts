@@ -6,6 +6,7 @@ import { User } from '../models/user.model';
 import { Ploeg } from '../models/ploeg.model';
 import { environment } from './../../environments/environment';
 import { Team } from '../models/team.model';
+import { Competition } from '../models/competition.model';
 
 @Injectable({
   providedIn: 'root'
@@ -72,5 +73,26 @@ export class AdminService {
 
   updateTeam(TeamID: number, team: Team): Observable<Team> {
     return this.http.put<Team>(environment.API_ENDPOINT + "/team/" + TeamID, team); 
+  }
+
+  //COMPETITIONS
+  getCompetitionById(CompetitionID: number): Observable<Competition> {
+    return this.http.get<Competition>(environment.API_ENDPOINT + "/tournooi/" + CompetitionID);
+  }
+
+  getCompetitions(): Observable<Competition[]> {
+    return this.http.get<Competition[]>(environment.API_ENDPOINT + "/tournooi");
+  }
+
+  addCompetition(newCompetition: Competition): Observable<Competition> {
+    return this.http.post<Competition>(environment.API_ENDPOINT + "/tournooi/", newCompetition);
+  }
+
+  deleteCompetition(CompetitionID: number): Observable<Competition> {
+    return this.http.delete<Competition>(environment.API_ENDPOINT + "/tournooi/" + CompetitionID);
+  }
+
+  updateCompetition(CompetitionID: number, competition: Competition): Observable<Competition> {
+    return this.http.put<Competition>(environment.API_ENDPOINT + "/tournooi/" + CompetitionID, competition); 
   }
 }
