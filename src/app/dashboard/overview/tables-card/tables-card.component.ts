@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Foosballtable } from './../../../competitions/models/foosballtable.model';
+import { Foosballtable } from './../../../models/foosballtable.model';
 
 @Component({
   selector: 'app-tables-card',

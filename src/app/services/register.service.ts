@@ -15,4 +15,6 @@ export class RegisterService {
     return this.http.post<User>(environment.API_ENDPOINT + "/user/", user);
 
   }
+
+  
 }

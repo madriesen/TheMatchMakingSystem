@@ -14,6 +14,9 @@ import {RegisterComponent} from './security/register/register.component';
 import { SecurityInterceptor } from './security/security.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChallengeComponent } from './challenge/challenge.component';
+import { MatSelectModule } from '@angular/material/select';
+
+
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { ChallengeComponent } from './challenge/challenge.component';
     AdminModule,
     DashboardModule,
     FontAwesomeModule,
-    SecurityModule
+    SecurityModule,
+    MatSelectModule
 
   ],
   providers: [{
