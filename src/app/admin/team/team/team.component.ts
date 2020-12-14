@@ -72,7 +72,7 @@ export class TeamComponent implements OnInit {
   }
 
   editTeam(id) {
-    this.route.navigate(['/editTeam'], { queryParams: {id}});
+    this.route.navigate(['/dashboard/admin/editTeam'], { queryParams: {id}});
   }
 
 }

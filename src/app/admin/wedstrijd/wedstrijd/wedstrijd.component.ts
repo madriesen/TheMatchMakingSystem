@@ -67,7 +67,7 @@ export class WedstrijdComponent implements OnInit {
   }
 
   editWedstrijd(id) {
-    this.route.navigate(['/editWedstrijd'], { queryParams: {id}});
+    this.route.navigate(['/dashboard/admin/editWedstrijd'], { queryParams: {id}});
   }
 
 }
