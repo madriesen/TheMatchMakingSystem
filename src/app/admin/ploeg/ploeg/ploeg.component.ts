@@ -61,7 +61,7 @@ export class PloegComponent implements OnInit {
   }
 
   editPloeg(id) {
-    this.route.navigate(['/editPloeg'], { queryParams: {id}});
+    this.route.navigate(['/dashboard/admin/editPloeg'], { queryParams: {id}});
   }
 
 }
