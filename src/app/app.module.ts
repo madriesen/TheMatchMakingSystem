@@ -14,13 +14,20 @@ import {RegisterComponent} from './security/register/register.component';
 import { SecurityInterceptor } from './security/security.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { MatSelectModule } from '@angular/material/select';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+
+  
     
    
   
@@ -33,9 +40,11 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     AdminModule,
     DashboardModule,
     FontAwesomeModule,
-    SecurityModule
+    SecurityModule,
+    MatSelectModule
 
   ],
+  exports:[SharedModule],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: SecurityInterceptor,

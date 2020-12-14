@@ -1,0 +1,30 @@
+<h1 class="font-square uppercase p-5 text-4xl">Pas tournooi {{competitie.name}} aan</h1>
+<mat-card id="card">
+    <mat-card-content>
+        <form [formGroup]="editCompetitionForm" (ngSubmit)="onSubmit()" [style.width.px]=700 class="flex flex-col">
+            <mat-form-field>
+                <mat-label>Tournooi naam</mat-label>
+                <input matInput type="text" formControlName="name" [(ngModel)]="competitie.name" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Ploeg 1</mat-label>
+                <mat-select [(value)]="selectedPloeg1" name="ploeg1">
+                    <mat-option *ngFor="let ploeg of ploegen" [value]="ploeg" [(ngModel)]="competitie.ploeg1">
+                        {{ploeg.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class='formfield'>
+                <mat-label>Ploeg 2</mat-label>
+                <mat-select [(value)]="selectedPloeg2" name="ploeg2">
+                    <mat-option *ngFor="let ploeg of ploegen" [value]="ploeg" [(ngModel)]="competitie.ploeg2">
+                        {{ploeg.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div>
+                <button class="button bg-primary px-3 py-2" mat-raised-button type="submit">Pas tournooi aan</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

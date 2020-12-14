@@ -34,7 +34,6 @@ export class AddPloegComponent implements OnInit {
     this._ploegService.getUsers().subscribe(
       result => {
         this.users = result;
-        console.log(this.users);
       }
     );
   }

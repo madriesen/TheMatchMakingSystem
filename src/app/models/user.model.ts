@@ -16,7 +16,8 @@ export class User {
         public role: Role = null,  
         public ploegID: number = 0,
         public ploeg: Ploeg = null, 
-        public token: string =""
+        public token: string ="",
+        public ranking: number=0
         
     ) { }
 }

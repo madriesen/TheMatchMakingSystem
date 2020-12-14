@@ -22,8 +22,6 @@ export class PloegComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  users: User[];
-  selectedUser: number = null;
 
   constructor(private _ploegService: AdminService, private route: Router) {
     this.ngOnInit();
@@ -48,13 +46,12 @@ export class PloegComponent implements OnInit {
         this.dataSource = new MatTableDataSource(this.ploegen);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        console.log(this.ploegen);
       }
     );
   }
 
   addPloeg() {
-    this.route.navigate(['/addPloeg']);
+    this.route.navigate(['/dashboard/admin/addPloeg']);
   }
 
   deletePloeg(id) {
@@ -64,7 +61,7 @@ export class PloegComponent implements OnInit {
   }
 
   editPloeg(id) {
-    this.route.navigate(['/editPloeg'], { queryParams: {id}});
+    this.route.navigate(['/dashboard/admin/editPloeg'], { queryParams: {id}});
   }
 
 }

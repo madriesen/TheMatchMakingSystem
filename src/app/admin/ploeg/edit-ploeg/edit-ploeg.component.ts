@@ -19,7 +19,8 @@ export class EditPloegComponent implements OnInit {
     companyName: [''],
     address: [''],
     town: [''],
-    zipcode: ['']
+    zipcode: [''],
+    captain: ['']
   })
 
   id: number = 0;
@@ -42,6 +43,12 @@ export class EditPloegComponent implements OnInit {
     this._ploegService.getPloegById(this.id).subscribe(
       result => {
         this.ploeg = result;
+        this._ploegService.getUser(this.ploeg['userID']).subscribe(
+          captain => {
+            this.ploeg['user'] = captain;
+            this.selectedUser = captain;
+          }
+        )
       }
     );
   }
@@ -50,7 +57,6 @@ export class EditPloegComponent implements OnInit {
     this._ploegService.getUsers().subscribe(
       result => {
         this.users = result;
-        console.log(this.users);
       }
     );
   }

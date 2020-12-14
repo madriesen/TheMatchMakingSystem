@@ -1,3 +1,5 @@
+import { Team } from "./team.model";
+
 export class Ploeg {
 
     constructor(
@@ -6,8 +8,9 @@ export class Ploeg {
         public companyName:string = "",
         public address:string = "",
         public town:string = "",
-        public zipcode:string = "",
-        public userID:number = 0
+        public zipCode:string = "",
+        public userID:number = 0,
+        public teams:Team[]=null
         )
         
         {}

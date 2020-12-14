@@ -16,14 +16,21 @@ import { TablesCardComponent } from './overview/tables-card/tables-card.componen
 import { ShortTableComponent } from './overview/tables-card/short-table/short-table.component';
 import { CompetitionCardComponent } from './overview/competition-card/competition-card.component';
 import { CompetitionTeamComponent } from './overview/competition-card/competition-team/competition-team.component';
-
+import { ChallengeteamsComponent } from './challenge/challengeteams/challengeteams.component';
+import { ChallengeComponent } from './challenge/challenge.component';
+import { SharedModule } from '../shared/shared.module';
+//import {AddTableComponent} from '../admin/add-table/add-table.component'
+import {FormsModule} from '@angular/forms';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     DashboardRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule,
+    FormsModule
   ],
   declarations: [
     DashboardComponent,
@@ -35,8 +42,12 @@ import { CompetitionTeamComponent } from './overview/competition-card/competitio
     MatchCardComponent,
     TablesCardComponent,
     ShortTableComponent,
+    ChallengeComponent,
     CompetitionCardComponent,
-    CompetitionTeamComponent
+    CompetitionTeamComponent,
+    ChallengeteamsComponent,
+    HistoryComponent,
+    //AddTableComponent
   ],
   bootstrap: [DashboardComponent]
 })

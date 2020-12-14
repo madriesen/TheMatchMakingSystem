@@ -1,0 +1,89 @@
+<h1 class="font-square uppercase p-5 text-4xl">Wedstrijden</h1>
+<div class="tableField">
+  <mat-card id="card">
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="date">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Wedstrijd datum </th>
+          <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Wedstrijd type </th>
+          <td mat-cell *matCellDef="let row"> {{row.WedstrijdType.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tournooi">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Tournooi naam </th>
+          <td mat-cell *matCellDef="let row"> {{row.tournooi.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="table">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Tafel naam </th>
+          <td mat-cell *matCellDef="let row"> {{row.table.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ploeg1">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Ploeg 1 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team1.ploeg.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="team1 name">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Team 1 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team1.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="team11">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Team 1 speler 1 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team1.player1.firstName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="team12">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Team 1 speler 2 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team1.player2.firstName}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ploeg2">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Ploeg 2 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team2.ploeg.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="team2 name">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Team 2 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team2.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="team21">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Team 2 speler 1 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team2.player1.firstName}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="team22">
+          <th class="w-1/12" mat-header-cell *matHeaderCellDef mat-sort-header> Team 2 speler 2 </th>
+          <td mat-cell *matCellDef="let row"> {{row.team2.player2.firstName}} </td>
+        </ng-container>
+
+
+
+
+        <ng-container matColumnDef="deleteWedstrijd">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+          <td mat-cell *matCellDef="let row">
+            <button (click)="editWedstrijd(row.wedstrijdID)" class="EditButton bg-primary px-3 py-2"
+              mat-raised-button>EDIT</button>
+            <button (click)="deleteWedstrijd(row.wedstrijdID)" class="bg-primary px-3 py-2"
+              mat-raised-button>DELETE</button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </mat-card>
+</div>
