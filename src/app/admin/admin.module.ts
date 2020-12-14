@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
 import { AddUserComponent } from './user/add-user/add-user.component';
-import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user/user.component';
 import { TablesComponent } from './table/tables/tables.component';
 import { PloegComponent } from './ploeg/ploeg/ploeg.component';
@@ -43,7 +42,7 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  declarations: [AddUserComponent, AdminComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, TeamComponent, AddTeamComponent, EditTeamComponent, CompetitieComponent, AddCompetitieComponent, EditCompetitieComponent, WedstrijdComponent, EditWedstrijdComponent, AddTableComponent],
+  declarations: [AddUserComponent, UserComponent, PloegComponent, AddPloegComponent, EditPloegComponent, TablesComponent, TeamComponent, AddTeamComponent, EditTeamComponent, CompetitieComponent, AddCompetitieComponent, EditCompetitieComponent, WedstrijdComponent, EditWedstrijdComponent, AddTableComponent],
 
 
   imports: [
