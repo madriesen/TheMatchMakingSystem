@@ -15,7 +15,7 @@ import {Router} from "@angular/router";
 export class DashboardComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private router: Router) { }
  
   ngOnInit(): void {
   }
@@ -24,6 +24,9 @@ export class DashboardComponent implements OnInit {
   firstName= localStorage.getItem("firstName") || null;
   lastName =  localStorage.getItem("lastName") || null;
   
-
+logout(){
+  console.log("test2")
+  
+}
 
 }

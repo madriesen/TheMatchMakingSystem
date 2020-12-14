@@ -7,16 +7,18 @@
             <div class="text-xl hidden md:inline"><span *ngIf="ranking">Ranking:&nbsp;{{ranking}}</span></div>
         </div>
         <app-navitem [icon]="faChalkboardTeacher" link="./overview" text="Dashboard"></app-navitem>
+        <app-navitem [icon]="faChalkboardTeacher" link="./history" text="History"></app-navitem>
+        <app-navitem [icon]="faChalkboardTeacher" link="./challenge" text="Challenge!"></app-navitem>
+
+
 
         <!-- if admin -->
-        <app-navitem [icon]="faChalkboardTeacher" link="./users" text="Gebruikers"></app-navitem>
-        <!-- end if admin -->
-
-        <app-navitem [icon]="faFutbol" link="./matches" text="Wedstrijden"></app-navitem>
-        <app-navitem [icon]="faChess" link="./tournaments" text="Toornooien"></app-navitem>
-        <app-navitem [icon]="faMapMarkerAlt" link="./tables" text="Foosbal tafels"></app-navitem>
-        <app-navitem [icon]="faMedal" link="./competitions" text="Klassement"></app-navitem>
-
-        <app-navitem class="md:mt-auto" [icon]="faPowerOff" link="/logout" text="Afmelden"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faChalkboardTeacher" link="admin/users" text="Gebruikers"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faFutbol" link="admin/matches" text="Wedstrijden"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faChess" link="admin/tournaments" text="Toornooien"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faMapMarkerAlt" link="admin/tables" text="Foosbal tafels"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faMedal" link="admin/competitions" text="Klassement"></app-navitem>
+ <!-- end if admin -->
+        <app-navitem class="md:mt-auto" [icon]="faPowerOff" click="logout()" text="Afmelden"></app-navitem>
     </div>
 </nav>
