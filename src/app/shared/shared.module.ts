@@ -19,6 +19,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -46,7 +48,9 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatTableModule,
     MatDividerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatExpansionModule,
+    MatTabsModule
   
   ],
   exports: [
@@ -69,7 +73,9 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatTableModule,
     MatDividerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatExpansionModule,
+    MatTabsModule
     
     
 
