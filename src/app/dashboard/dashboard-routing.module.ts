@@ -11,6 +11,7 @@ import { ChallengeteamsComponent } from './challenge/challengeteams/challengetea
 
 
 import {TablesComponent} from '../admin/table/tables/tables.component';
+import { HistoryComponent } from './history/history.component';
 
 
 const dashboardRoutes: Routes = [
@@ -26,6 +27,7 @@ const dashboardRoutes: Routes = [
           { path: 'challenge', component: ChallengeComponent},
           { path:'challengeteams', component:ChallengeteamsComponent},
           {path: 'tables', component: TablesComponent },
+          {path: 'history', component: HistoryComponent },
           // { path: 'tables', 
           // component: TablesComponent ,
           // children : [
