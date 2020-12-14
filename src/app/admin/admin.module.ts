@@ -21,7 +21,6 @@ import { AddTableComponent } from './table/add-table/add-table.component';
 
 @NgModule({
   declarations: [AddUserComponent,
-    AdminComponent,
     UserComponent,
     PloegComponent,
     AddPloegComponent,
