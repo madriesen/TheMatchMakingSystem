@@ -19,7 +19,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTabsModule} from '@angular/material/tabs';
+
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 @NgModule({
   declarations: [],
@@ -45,7 +49,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatTableModule,
     MatDividerModule,
     MatPaginatorModule,
+
+    MatExpansionModule,
+    MatTabsModule,
+  
+
     MatSlideToggleModule
+
   ],
   exports: [
     MatToolbarModule,
@@ -68,7 +78,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatTableModule,
     MatDividerModule,
     MatPaginatorModule,
+
+    MatExpansionModule,
+    MatTabsModule,
+
     MatSlideToggleModule
+
   ]
 })
 export class SharedModule { }
