@@ -23,8 +23,6 @@ import { ChallengeComponent } from './challenge/challenge.component';
 import { ChallengeteamsComponent } from './challenge/challengeteams/challengeteams.component';
 
 
-
-import {TablesComponent} from '../admin/table/tables/tables.component';
 import { HistoryComponent } from './history/history.component';
 
 const dashboardRoutes: Routes = [
@@ -35,23 +33,7 @@ const dashboardRoutes: Routes = [
       { path: 'overview', component: OverviewComponent },
       {
 
-        path: '',
-        children: [
-          { path: 'overview', component: OverviewComponent },
-
-          { path: 'challenge', component: ChallengeComponent},
-          { path:'challengeteams', component:ChallengeteamsComponent},
-          {path: 'tables', component: TablesComponent },
-          {path: 'history', component: HistoryComponent },
-          // { path: 'tables', 
-          // component: TablesComponent ,
-          // children : [
-          //   {path: 'add', component: AddTableComponent}
-          // ]},
-
-
-          
-
+       
         path: 'admin', children: [
           { path: 'users', component: UserComponent },
           { path: 'addUser', component: AddUserComponent },
@@ -73,6 +55,7 @@ const dashboardRoutes: Routes = [
       },
       { path: 'challenge', component: ChallengeComponent},
       { path:'challengeteams', component:ChallengeteamsComponent},
+      {path: 'history', component: HistoryComponent },
     ]
   }
 ];
