@@ -17,7 +17,7 @@ export class NavigationComponent implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
   faPowerOff = faPowerOff;
   faChalkboardTeacher = faChalkboardTeacher;
-  constructor(private _authenticatedUserService: AuthenticatedUserService, private router: Router) { }
+  constructor(private _authenticatedUserService: AuthenticatedUserService) { }
   isAdmin: boolean = false;
   faMedal = faMedal;
   roleid:number;
@@ -38,10 +38,7 @@ authUser: User;
     this.authUser = this._authenticatedUserService.getAuthenticatedUser();
 
   }
-  logout(){
-    // todo: implement logout
-    this.router.navigate(['/']);
-  }
+  
 
 
 }
