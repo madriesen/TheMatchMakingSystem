@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
 
   constructor(private _userService: AdminService, private route: Router) {
     this.ngOnInit();
-   }
+  }
 
   ngOnInit(): void {
     this.getUsers();
@@ -41,7 +41,7 @@ export class UserComponent implements OnInit {
   }
 
   addUser() {
-    this.route.navigate(['/addUser']);
+    this.route.navigate(['/dashboard/admin/addUser']);
   }
 
   deleteUser(id) {

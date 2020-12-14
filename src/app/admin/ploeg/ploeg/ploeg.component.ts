@@ -51,7 +51,7 @@ export class PloegComponent implements OnInit {
   }
 
   addPloeg() {
-    this.route.navigate(['/addPloeg']);
+    this.route.navigate(['/dashboard/admin/addPloeg']);
   }
 
   deletePloeg(id) {

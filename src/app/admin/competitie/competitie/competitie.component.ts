@@ -51,7 +51,7 @@ export class CompetitieComponent implements OnInit {
   }
 
   addCompetition() {
-    this.route.navigate(['/addCompetition']);
+    this.route.navigate(['/dashboard/admin/addCompetition']);
   }
 
   deleteCompetiton(id) {
