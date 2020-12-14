@@ -18,15 +18,19 @@ export class NavigationComponent implements OnInit {
   faPowerOff = faPowerOff;
   faChalkboardTeacher = faChalkboardTeacher;
   constructor(private _authenticatedUserService: AuthenticatedUserService, private router: Router) { }
-
+  isAdmin: boolean = false;
   faMedal = faMedal;
-  
+  roleid:number;
   ngOnInit(): void {
     this.getAuthUser()
+    if(localStorage.getItem("roleid")=="2"){
+      this.isAdmin=true;
+    }
   }
 
   firstName = localStorage.getItem("firstName");
   lastName = localStorage.getItem("lastName");
+  
   ranking =  localStorage.getItem("ranking") || null;
 authUser: User;
   getAuthUser()

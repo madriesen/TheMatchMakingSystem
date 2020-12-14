@@ -16,3 +16,4 @@ export class Team {
         public wedstrijden: Wedstrijd[]=null
         ){}
 }
+
