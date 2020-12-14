@@ -27,6 +27,7 @@ export class NavigationComponent implements OnInit {
 
   firstName = localStorage.getItem("firstName");
   lastName = localStorage.getItem("lastName");
+  ranking =  localStorage.getItem("ranking") || null;
 authUser: User;
   getAuthUser()
   {

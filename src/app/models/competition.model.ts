@@ -8,5 +8,6 @@ export class Competition {
         public ploeg1: Ploeg = null,
         public ploeg2ID:number = 0,
         public ploeg2: Ploeg = null
+
     ){}
 }

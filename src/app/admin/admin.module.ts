@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 import { AddUserComponent } from './user/add-user/add-user.component';
-import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user/user.component';
 import { TablesComponent } from './table/tables/tables.component';
 import { PloegComponent } from './ploeg/ploeg/ploeg.component';
@@ -37,6 +36,7 @@ import { AddTableComponent } from './table/add-table/add-table.component';
     WedstrijdComponent,
     EditWedstrijdComponent,
     AddTableComponent],
+
   imports: [
     CommonModule,
     SharedModule,

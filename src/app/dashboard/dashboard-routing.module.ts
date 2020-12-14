@@ -20,6 +20,8 @@ import { EditCompetitieComponent } from '../admin/competitie/edit-competitie/edi
 import { WedstrijdComponent } from '../admin/wedstrijd/wedstrijd/wedstrijd.component';
 import { EditWedstrijdComponent } from '../admin/wedstrijd/edit-wedstrijd/edit-wedstrijd.component';
 import { AddTableComponent } from '../admin/table/add-table/add-table.component';
+import { ChallengeComponent } from './challenge/challenge.component';
+import { ChallengeteamsComponent } from './challenge/challengeteams/challengeteams.component';
 
 
 const dashboardRoutes: Routes = [
@@ -27,7 +29,6 @@ const dashboardRoutes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
-
       { path: 'overview', component: OverviewComponent },
       {
         path: 'admin', children: [
@@ -47,7 +48,9 @@ const dashboardRoutes: Routes = [
           { path: 'tables', component: TablesComponent },
           { path: 'addTable', component: AddTableComponent }
         ]
-      }
+      },
+      { path: 'challenge', component: ChallengeComponent},
+      { path:'challengeteams', component:ChallengeteamsComponent},
     ]
   }
 ];
