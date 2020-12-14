@@ -1,56 +1,60 @@
-<h1>Tafelsbeheer</h1>
+<h1 class="font-square uppercase p-5 text-4xl">Tafelsbeheer</h1>
 
-<div><button  mat-raised-button color="primary" (click)="addTable()">Tafel Toevoegen</button></div>
 <div class="tableField">
   <mat-card id="card">
-    <div class="mat-elevation-z8">
+    <button mat-raised-button class="bg-primary px-3 py-2" (click)="addTable()">Tafel Toevoegen</button>
+
+    <div class="mat-elevation-z8 mt-4">
       <table mat-table [dataSource]="dataSource" matSort>
 
-       
-         <ng-container matColumnDef="name">
+
+        <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Tafelnaam </th>
           <td mat-cell *matCellDef="let row"> {{row.name}} </td>
         </ng-container>
 
-       
-         <ng-container matColumnDef="ploeg.companyName">
+
+        <ng-container matColumnDef="ploeg.companyName">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Bedrijf </th>
           <td mat-cell *matCellDef="let row"> {{row.ploeg.companyName}} </td>
         </ng-container>
 
-      
-         <ng-container matColumnDef="ploeg.address">
+
+        <ng-container matColumnDef="ploeg.address">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Adres </th>
           <td mat-cell *matCellDef="let row"> {{row.ploeg.address}} </td>
         </ng-container>
 
-        
-         <ng-container matColumnDef="ploeg.zipCode">
+
+        <ng-container matColumnDef="ploeg.zipCode">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Postcode </th>
           <td mat-cell *matCellDef="let row"> {{row.ploeg.zipCode}} </td>
         </ng-container>
 
         <ng-container matColumnDef="ploeg.town">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Stad </th>
-            <td mat-cell *matCellDef="let row"> {{row.ploeg.town}} </td>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Stad </th>
+          <td mat-cell *matCellDef="let row"> {{row.ploeg.town}} </td>
         </ng-container>
 
         <ng-container matColumnDef="user.firstName">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Tafelbeheerder </th>
-            <td mat-cell *matCellDef="let row"> {{row.user.firstName}} </td>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Tafelbeheerder </th>
+          <td mat-cell *matCellDef="let row"> {{row.user.firstName}} </td>
         </ng-container>
 
         <ng-container matColumnDef="ploeg.name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Ploeg </th>
-            <td mat-cell *matCellDef="let row"> {{row.ploeg.name}} </td>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Ploeg </th>
+          <td mat-cell *matCellDef="let row"> {{row.ploeg.name}} </td>
         </ng-container>
 
         <ng-container matColumnDef="deleteTable">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Verwijderen</th>
-            <td mat-cell *matCellDef="let row">
-                <button mat-raised-button color="accent" aria-label="Tafel verwijderen" (click)="deleteTable(row.tableID)" ><mat-icon >delete_forever</mat-icon></button>
-            </td>
-          </ng-container>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Verwijderen</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-raised-button class="bg-primary px-3 py-2" aria-label="Tafel verwijderen"
+              (click)="deleteTable(row.tableID)">
+              <mat-icon>delete_forever</mat-icon>
+            </button>
+          </td>
+        </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

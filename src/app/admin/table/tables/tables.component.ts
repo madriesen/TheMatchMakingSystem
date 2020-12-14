@@ -49,7 +49,7 @@ export class TablesComponent implements OnInit {
   }
 
   addTable() {
-    this.route.navigate(['/addTable']);
+    this.route.navigate(['/dashboard/admin/addTable']);
   }
 
   deleteTable(id) {
