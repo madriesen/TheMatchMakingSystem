@@ -9,7 +9,6 @@ import { UserComponent } from '../admin/user/user/user.component';
 import { PloegComponent } from '../admin/ploeg/ploeg/ploeg.component';
 import { AddPloegComponent } from '../admin/ploeg/add-ploeg/add-ploeg.component';
 import { AddUserComponent } from '../admin/user/add-user/add-user.component';
-import { AdminComponent } from '../admin/admin/admin.component';
 import { EditPloegComponent } from '../admin/ploeg/edit-ploeg/edit-ploeg.component';
 import { TeamComponent } from '../admin/team/team/team.component';
 import { AddTeamComponent } from '../admin/team/add-team/add-team.component';
