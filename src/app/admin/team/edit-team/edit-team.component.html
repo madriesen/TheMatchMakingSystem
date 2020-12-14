@@ -1,9 +1,9 @@
-<h1>Pas team aan</h1>
+<h1 class="font-square uppercase p-5 text-4xl">Pas team aan</h1>
 <mat-card id="card">
     <mat-card-content>
-        <form [formGroup]="editTeamForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="editTeamForm" (ngSubmit)="onSubmit()" class="flex flex-col" [style.width.px]=700>
             <div>
-                <mat-form-field [style.width.px]=700>
+                <mat-form-field>
                     <mat-label>Naam</mat-label>
                     <input matInput type="text" formControlName="name" [(ngModel)]="team.name" />
                 </mat-form-field>
@@ -24,7 +24,9 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <button class="button" mat-raised-button color="primary" type="submit">Pas team aan</button>
+            <div>
+                <button class="button px-3 py-2 bg-primary" mat-raised-button type="submit">Pas team aan</button>
+            </div>
         </form>
     </mat-card-content>
 </mat-card>

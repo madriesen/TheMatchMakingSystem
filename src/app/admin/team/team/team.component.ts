@@ -62,7 +62,7 @@ export class TeamComponent implements OnInit {
   }
 
   addTeam() {
-    this.route.navigate(['/addTeam']);
+    this.route.navigate(['/dashboard/admin/addTeam']);
   }
 
   deleteTeam(id) {

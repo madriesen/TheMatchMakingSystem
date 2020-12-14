@@ -1,31 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from  '@angular/material/toolbar';
-import { MatIconModule } from  '@angular/material/icon';
-import {MatSidenavModule } from  '@angular/material/sidenav';
-import { MatListModule } from  '@angular/material/list';
-import { MatButtonModule } from  '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatMenuModule} from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu'
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatTableModule} from '@angular/material/table';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSelectModule } from '@angular/material/select';    
-import {​​​​​MatSlideToggleModule}​​​​​ from '@angular/material/slide-toggle';
-
-
-
-
-
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [],
@@ -51,8 +45,7 @@ import {​​​​​MatSlideToggleModule}​​​​​ from '@angular/mater
     MatTableModule,
     MatDividerModule,
     MatPaginatorModule,
-    ​​​​​MatSlideToggleModule
-  
+    MatSlideToggleModule
   ],
   exports: [
     MatToolbarModule,
@@ -75,10 +68,7 @@ import {​​​​​MatSlideToggleModule}​​​​​ from '@angular/mater
     MatTableModule,
     MatDividerModule,
     MatPaginatorModule,
-    ​​​​​MatSlideToggleModule
-    
-    
-
+    MatSlideToggleModule
   ]
 })
 export class SharedModule { }
