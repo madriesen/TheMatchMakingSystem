@@ -21,6 +21,8 @@ import { EditWedstrijdComponent } from '../admin/wedstrijd/edit-wedstrijd/edit-w
 import { AddTableComponent } from '../admin/table/add-table/add-table.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { ChallengeteamsComponent } from './challenge/challengeteams/challengeteams.component';
+import { WedstrijdenComponent } from './wedstrijden/wedstrijden.component';
+
 
 
 import { HistoryComponent } from './history/history.component';
@@ -56,6 +58,7 @@ const dashboardRoutes: Routes = [
       { path: 'challenge', component: ChallengeComponent},
       { path:'challengeteams', component:ChallengeteamsComponent},
       {path: 'history', component: HistoryComponent },
+      {path: 'wedstrijd', component: WedstrijdenComponent },
     ]
   }
 ];
