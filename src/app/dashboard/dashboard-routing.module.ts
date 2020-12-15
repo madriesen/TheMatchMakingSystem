@@ -23,6 +23,8 @@ import { ChallengeComponent } from './challenge/challenge.component';
 import { ChallengeteamsComponent } from './challenge/challengeteams/challengeteams.component';
 
 
+import { HistoryComponent } from './history/history.component';
+
 const dashboardRoutes: Routes = [
   {
     path: 'dashboard',
@@ -30,6 +32,8 @@ const dashboardRoutes: Routes = [
     children: [
       { path: 'overview', component: OverviewComponent },
       {
+
+       
         path: 'admin', children: [
           { path: 'users', component: UserComponent },
           { path: 'addUser', component: AddUserComponent },
@@ -46,10 +50,12 @@ const dashboardRoutes: Routes = [
           { path: 'editWedstrijd', component: EditWedstrijdComponent },
           { path: 'tables', component: TablesComponent },
           { path: 'addTable', component: AddTableComponent }
+
         ]
       },
       { path: 'challenge', component: ChallengeComponent},
       { path:'challengeteams', component:ChallengeteamsComponent},
+      {path: 'history', component: HistoryComponent },
     ]
   }
 ];

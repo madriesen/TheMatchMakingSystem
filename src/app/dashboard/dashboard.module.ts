@@ -21,6 +21,7 @@ import { ChallengeComponent } from './challenge/challenge.component';
 import { SharedModule } from '../shared/shared.module';
 //import {AddTableComponent} from '../admin/add-table/add-table.component'
 import {FormsModule} from '@angular/forms';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   imports: [
@@ -45,6 +46,7 @@ import {FormsModule} from '@angular/forms';
     CompetitionCardComponent,
     CompetitionTeamComponent,
     ChallengeteamsComponent,
+    HistoryComponent,
     //AddTableComponent
   ],
   bootstrap: [DashboardComponent]

@@ -76,5 +76,6 @@ export class ChallengeteamsComponent implements OnInit {
     this._serv.addWedstrijd(this.wedstrijd).subscribe(result=>{
       console.log(result)
     });
+    this.route.navigate(['/dashboard/overview']);
   }
 }

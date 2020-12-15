@@ -1,0 +1,28 @@
+<p>wedstrijden works!</p>
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                        (closed)="panelOpenState = false"
+                         *ngFor="let wedstrijd of wedstrijden">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+
+           {{wedstrijd.date}}
+        </mat-panel-title>
+        <mat-panel-description>
+            Klik om te {{panelOpenState ? 'verbergen' : 'openen'}}
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+            <mat-tab-group >
+                <mat-tab label="Rondes">{{wedstrijd.rondeNummer}}</mat-tab>
+                <mat-tab label="Wedstrijd type">{{wedstrijd.wedstrijdType.name}}</mat-tab>
+                <mat-tab label="Tournooi"> {{wedstrijd.tournooi.name}}</mat-tab>
+                <mat-tab label="Bedrijven"> {{wedstrijd.team1.ploeg.companyName}} &nbsp; VS &nbsp; {{wedstrijd.team2.ploeg.companyName}} </mat-tab>
+                <mat-tab label="Ploegen"> {{wedstrijd.team1.ploeg.name}} &nbsp; VS &nbsp; {{wedstrijd.team2.ploeg.name}} </mat-tab>
+                <mat-tab label="Teams"> {{wedstrijd.team1.name}} &nbsp; VS &nbsp; {{wedstrijd.team2.name}} </mat-tab>
+                <!-- if winner=> span winner else span set winner -->
+                <mat-tab label="Wedstrijd resultaat" *ngIf="!wedstrijd.winnaarID"><span><button mat-raised-button color="primary" (click)="gewonnen(wedstrijd)">Gewonnen</button></span></mat-tab>
+                <mat-tab label="Wedstrijd resultaat" *ngIf="wedstrijd.winnaar" >Team van het bedrijf {{wedstrijd['winnaar']['ploeg']['companyName']}} heeft gewonnen</mat-tab>
+                <!-- <mat-tab label="Wedstrijd resultaat" *ngIf="wedstrijd.winnaarID != ownTeam.teamID">Hahahahah. uw team heeft verloren. Fail</mat-tab> -->
+            </mat-tab-group>
+    </mat-expansion-panel>
+</mat-accordion>

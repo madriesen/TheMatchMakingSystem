@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,9 +9,13 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class OverviewComponent implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  logout(){
+    localStorage.clear();
+    console.log("test");
+    this.router.navigate(['/']);
+  }
 }
