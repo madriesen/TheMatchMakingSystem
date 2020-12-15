@@ -66,9 +66,9 @@ export class EditCompetitieComponent implements OnInit {
       this.competitie.ploeg1ID = this.selectedPloeg1.ploegID;
       this.competitie.ploeg2ID = this.selectedPloeg2.ploegID;
     }
-    console.log(this.competitie);
+  
     this._competitionService.updateCompetition(this.id, this.competitie).subscribe();
-    this.route.navigate(['/competitions'], { queryParams: {"competitionUpdated": true}});
+    this.route.navigate(['/dashboard/admin/competitions'], { queryParams: {"competitionUpdated": true}});
 
   }
 

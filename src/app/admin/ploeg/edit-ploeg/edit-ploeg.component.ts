@@ -64,7 +64,7 @@ export class EditPloegComponent implements OnInit {
   onSubmit() {
     this.ploeg.userID = this.selectedUser.userID;
     this._ploegService.updatePloeg(this.id, this.ploeg).subscribe();
-    this.route.navigate(['/ploegen'], { queryParams: {"ploegUpdated": true }});
+    this.route.navigate(['/dashboard/admin/ploegen'], { queryParams: {"ploegUpdated": true }});
   }
 
 }

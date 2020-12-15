@@ -15,7 +15,6 @@ export class OverviewComponent implements OnInit {
   }
   logout(){
     localStorage.clear();
-    console.log("test");
     this.router.navigate(['/']);
   }
 }

@@ -30,7 +30,7 @@ export class ChallengeComponent implements OnInit {
     });
   }
   chooseCompetition(id:number){
-    console.log(id)
+   
     this.route.navigate(['/dashboard/challengeteams'], { queryParams: {id}});
   }
   

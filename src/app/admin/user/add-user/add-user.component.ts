@@ -33,7 +33,7 @@ export class AddUserComponent implements OnInit {
 
   onSubmit() {
     this._userService.addUser(this.addUserForm.value).subscribe();
-    this.route.navigate(['/users']);
+    this.route.navigate(['/dashboard/admin/users']);
   }
 
 }

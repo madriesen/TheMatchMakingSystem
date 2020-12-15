@@ -28,10 +28,12 @@ export class RegisterComponent implements OnInit {
   submitted: boolean = false
   userModel: User = new User();
 
-  register() {
-    this.submitted = true;
+  register() 
+  {
+    
     this.userModel.roleID = 1;
-    this._registerService.register(this.userModel)
+    console.log(this.userModel)
+    this._registerService.register(this.userModel).subscribe();
 
   }
 

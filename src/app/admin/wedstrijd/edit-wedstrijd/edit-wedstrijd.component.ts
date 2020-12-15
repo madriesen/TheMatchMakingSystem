@@ -85,7 +85,7 @@ export class EditWedstrijdComponent implements OnInit {
     this.wedstrijd.team1ID = this.selectedTeam1.teamID;
     this.wedstrijd.team2ID = this.selectedTeam2.teamID;
     this.wedstrijd.tableID = this.selectedTable.tableID;
-    console.log(this.wedstrijd);
+    
     this._wedstrijdService.updateWedstrijd(this.id, this.wedstrijd).subscribe();
     this.route.navigate(['/wedstrijden'], { queryParams: {"wedstrijdUpdated": true}});
   }

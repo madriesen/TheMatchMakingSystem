@@ -41,7 +41,7 @@ export class AddPloegComponent implements OnInit {
   onSubmit() {
     this.addPloegForm.value["userID"] = this.selectedUser.userID;
     this._ploegService.addPloeg(this.addPloegForm.value).subscribe();
-    this.route.navigate(['/ploegen']);
+    this.route.navigate(['/dashboard/admin/ploegen']);
   }
 
 }

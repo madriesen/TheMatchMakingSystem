@@ -48,7 +48,7 @@ export class HistoryComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.wedstrijden);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        console.log(this.wedstrijden);
+       
   }
 
 }

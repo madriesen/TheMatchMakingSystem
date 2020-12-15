@@ -42,13 +42,13 @@ export class ChallengeteamsComponent implements OnInit {
       this._serv.getTeamsofPloeg(this.tournooi.ploeg1ID).subscribe(teams1 => {
         this.tournooi.ploeg1.teams=teams1
       });
-      this._serv.getTablesByPloegID(this.tournooi.ploeg1ID).pipe(finalize(()=> console.log(this.myTables))).subscribe(tables=>{
+      this._serv.getTablesByPloegID(this.tournooi.ploeg1ID).subscribe(tables=>{
         this.myTables=tables;
       });
       this._serv.getTeamsofPloeg(this.tournooi.ploeg2ID).subscribe(teams2 => {
         this.tournooi.ploeg2.teams=teams2
       });
-      this._serv.getTablesByPloegID(this.tournooi.ploeg2ID).pipe(finalize(()=> console.log(this.myTables))).subscribe(tables=>{
+      this._serv.getTablesByPloegID(this.tournooi.ploeg2ID).subscribe(tables=>{
         tables.forEach(table=>{
           this.myTables.push(table);
         })
@@ -57,24 +57,22 @@ export class ChallengeteamsComponent implements OnInit {
     
   }
   getVals(){
-    console.log(this.tournooi)
+   
     if(this.tournooi.ploeg1.ploegID==Number(localStorage.getItem("ploegid"))){
       this.opponentPloeg= this.tournooi.ploeg2;
     }
     if(this.tournooi.ploeg2.ploegID==Number(localStorage.getItem("ploegid"))){
       this.opponentPloeg= this.tournooi.ploeg1;
     }
-    this._serv.getMyTeams().pipe(finalize(()=> console.log(this.myTeams))).subscribe(teams=>{
+    this._serv.getMyTeams().subscribe(teams=>{
       this.myTeams=teams;
     });
     
-
-    console.log(this.opponentPloeg);
   }
   onSubmit(){
     this.wedstrijd["winnaarID"]=null;
     this._serv.addWedstrijd(this.wedstrijd).subscribe(result=>{
-      console.log(result)
+      
     });
     this.route.navigate(['/dashboard/overview']);
   }

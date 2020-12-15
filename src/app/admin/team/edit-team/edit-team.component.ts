@@ -74,7 +74,7 @@ export class EditTeamComponent implements OnInit {
       this.team.player2ID = null;
     }
     this._teamService.updateTeam(this.id, this.team).subscribe();
-    this.route.navigate(['/teams'], { queryParams: {"teamUpdated": true }});
+    this.route.navigate(['/dashboard/admin/teams'], { queryParams: {"teamUpdated": true }});
   }
 
 }
