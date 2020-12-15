@@ -12,6 +12,12 @@
 
 
 
+        <app-navitem [icon]="faFutbol" link="./wedstrijder" text="Wedstrijden"></app-navitem>
+        <app-navitem [icon]="faChess" link="./competitions" text="Toornooien"></app-navitem>
+        <app-navitem [icon]="faMapMarkerAlt" link="./tables" text="Foosbal tafels"></app-navitem>
+        <app-navitem [icon]="faMedal" link="./teams" text="Teams"></app-navitem>
+
+
         <!-- if admin -->
         <app-navitem *ngIf="isAdmin" [icon]="faChalkboardTeacher" link="admin/users" text="Gebruikers"></app-navitem>
         <app-navitem *ngIf="isAdmin" [icon]="faFutbol" link="admin/matches" text="Wedstrijden"></app-navitem>
