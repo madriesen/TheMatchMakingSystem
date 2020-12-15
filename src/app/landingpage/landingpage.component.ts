@@ -44,7 +44,7 @@ export class LandingpageComponent implements OnInit {
 
   onChooseLocation(location: string) {
     this.selectedLocation = location
-    //console.log("chosen location: "+ location)
+   
   }
 
   ngOnInit(): void {

@@ -48,7 +48,7 @@ export class AddTableComponent implements OnInit {
     this.addTableForm.value['userID'] = this.selectedUser.userID;
     if (this.addTableForm.value['name'] != '') {
       this._tableService.addTable(this.addTableForm.value).subscribe();
-      this.route.navigate(['/tables']);
+      this.route.navigate(['/dashboard/admin/tables']);
     }
   }
 

@@ -53,7 +53,7 @@ export class AddTeamComponent implements OnInit {
     }
     this.addTeamForm.value["ploegID"] = this.selectedPloeg.ploegID;
     this._teamService.addTeam(this.addTeamForm.value).subscribe();
-    this.route.navigate(['/teams']);
+    this.route.navigate(['/dashboard/admin/teams']);
   }
 
 }

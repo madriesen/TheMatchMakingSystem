@@ -37,7 +37,7 @@ export class AddCompetitieComponent implements OnInit {
     this.addCompetitionForm.value["ploeg1ID"] = this.selectedPloeg1.ploegID;
     this.addCompetitionForm.value["ploeg2ID"] = this.selectedPloeg2.ploegID;
     this._competitionService.addCompetition(this.addCompetitionForm.value).subscribe();
-    this.route.navigate(['/competitions']);
+    this.route.navigate(['/dashboard/admin/competitions']);
   }
 
 }

@@ -21,7 +21,7 @@ export class WedstrijdenComponent implements OnInit {
   ngOnInit(): void {
     this.ploegID = Number(localStorage.getItem("ploegID"))
     this.getUserTeamsAndWedstrijden()
-    console.log(this.wedstrijden)
+    
  
   }
   panelOpenState = false;
@@ -40,7 +40,7 @@ export class WedstrijdenComponent implements OnInit {
            team['ploeg'] = ploegResult;
          });
      })
-     //console.log(this.userTeams)
+     
      //get wedstrijd for each team 
      result.map(team => {
        this._wedstrijdService.getUserWedstrijden(team.teamID).subscribe(result2 =>{
@@ -75,7 +75,7 @@ export class WedstrijdenComponent implements OnInit {
          result2.forEach(w2 =>{
            this._wedstrijdService.getTeamByID(w2['team2ID']).subscribe(team2Result =>{
              w2["team2"]  = team2Result;
-             //console.log(team2Result)
+         
              this._wedstrijdService.getploegByID(team2Result.ploegID).subscribe(pResult =>
               {
                team2Result['ploeg'] = pResult
@@ -94,7 +94,7 @@ export class WedstrijdenComponent implements OnInit {
            }
            
          })
-         //console.log(this.wedstrijden)
+        
        });
      })
    })
@@ -123,7 +123,7 @@ export class WedstrijdenComponent implements OnInit {
 
         wedstrijd.winnaar = x
       })
-      console.log(wedstrijd)
+  
       //update wedstrijd
       this._wedstrijdService.updateWedstrijd(wedstrijd.wedstrijdID, wedstrijd).subscribe();
       //increase ranking for won users
@@ -135,7 +135,7 @@ export class WedstrijdenComponent implements OnInit {
           this.player1 = p
         })
         this.player1.ranking += 1
-        console.log(this.player1)
+        
         //update player
         this._wedstrijdService.updateUser(wedstrijd.team1.player1ID, this.player1).subscribe();
         
@@ -148,7 +148,7 @@ export class WedstrijdenComponent implements OnInit {
         this.player2 = p
       })
       this.player2.ranking += 1
-      console.log(this.player2)
+     
       //update player
       this._wedstrijdService.updateUser(wedstrijd.team1.player2ID, this.player2).subscribe();
       
@@ -186,7 +186,7 @@ export class WedstrijdenComponent implements OnInit {
         this.player1 = p
       })
       this.player1.ranking += 1
-      console.log(this.player1)
+      
       //update player1
       this._wedstrijdService.updateUser(wedstrijd.team2.player1ID, this.player1).subscribe();
       
@@ -198,7 +198,7 @@ export class WedstrijdenComponent implements OnInit {
         this.player2 = p
       })
       this.player2.ranking += 1
-      console.log(this.player2)
+     
       //update player2
       this._wedstrijdService.updateUser(wedstrijd.team2.player2ID, this.player2).subscribe(); 
     }

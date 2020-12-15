@@ -11,7 +11,7 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   register(user: User): Observable<User> {
-    
+  
     return this.http.post<User>(environment.API_ENDPOINT + "/user/", user);
 
   }

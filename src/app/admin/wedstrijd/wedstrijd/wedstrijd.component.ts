@@ -51,7 +51,7 @@ export class WedstrijdComponent implements OnInit {
               wedstrijd['tournooi'] = tournooi;
           });
         });
-        console.log(this.wedstrijden);
+      
         this.dataSource = new MatTableDataSource(this.wedstrijden);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;

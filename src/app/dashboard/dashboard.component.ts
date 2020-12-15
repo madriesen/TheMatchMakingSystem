@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   lastName =  localStorage.getItem("lastName") || null;
   
 logout(){
-  console.log("test2")
+  
   
 }
 

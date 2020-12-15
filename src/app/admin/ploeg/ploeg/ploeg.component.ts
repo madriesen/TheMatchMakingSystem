@@ -36,7 +36,7 @@ export class PloegComponent implements OnInit {
       result => {
         this.ploegen = result;
         result.forEach(ploeg => {
-          console.log(ploeg['userID']);
+         
           this._ploegService.getUser(ploeg['userID']).subscribe(
             result2 => {
               ploeg['user'] = result2;
