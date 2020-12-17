@@ -1,18 +1,18 @@
 import { stringify } from '@angular/compiler/src/util';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Team } from 'src/app/models/team.model';
 import { User } from 'src/app/models/user.model';
 import { Wedstrijd } from 'src/app/models/wedstrijd.model';
 import { AuthenticatedUserService } from 'src/app/services/authenticated-user.service';
 import { WedstrijdService } from 'src/app/services/wedstrijd.service';
-
+import {MatAccordion} from '@angular/material/expansion';
 @Component({
   selector: 'app-wedstrijden',
   templateUrl: './wedstrijden.component.html',
   styleUrls: ['./wedstrijden.component.scss']
 }) 
 export class WedstrijdenComponent implements OnInit {
-
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   constructor(private _wedstrijdService: WedstrijdService, private _AuthenticatedUserService: AuthenticatedUserService) { }
 
  

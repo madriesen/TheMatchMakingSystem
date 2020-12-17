@@ -9,14 +9,15 @@
         <app-navitem [icon]="faChalkboardTeacher" link="./overview" text="Dashboard"></app-navitem>
         <app-navitem [icon]="faChalkboardTeacher" link="./history" text="History"></app-navitem>
         <app-navitem [icon]="faChalkboardTeacher" link="./challenge" text="Challenge!"></app-navitem>
-        <app-navitem [icon]="faChalkboardTeacher" link="./wedstrijd" text="Wedstrijden"></app-navitem>
+     
 
 
-        <app-navitem *ngIf="isAdmin" [icon]="faChalkboardTeacher" link="./users" text="Gebruikers"></app-navitem>
-        <app-navitem *ngIf="isAdmin" [icon]="faFutbol" link="./wedstrijden" text="Wedstrijden"></app-navitem>
-        <app-navitem *ngIf="isAdmin" [icon]="faChess" link="./competitions" text="Toornooien"></app-navitem>
-        <app-navitem *ngIf="isAdmin" [icon]="faMapMarkerAlt" link="./tables" text="Foosbal tafels"></app-navitem>
-        <app-navitem *ngIf="isAdmin" [icon]="faMedal" link="./teams" text="Teams"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faChalkboardTeacher" link="./admin/users" text="Gebruikers"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faFutbol" link="./admin/wedstrijden" text="Wedstrijden"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faChess" link="./admin/competitions" text="Toornooien"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faMapMarkerAlt" link="./admin/tables" text="Foosbal tafels"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faMedal" link="./admin/teams" text="Teams"></app-navitem>
+        <app-navitem *ngIf="isAdmin" [icon]="faMedal" link="./admin/ploegen" text="Ploegen"></app-navitem>
 
     </div>
 </nav>
